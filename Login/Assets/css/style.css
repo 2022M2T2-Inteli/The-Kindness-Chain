@@ -11,6 +11,7 @@ body{
 	width: 320px;
 	padding: 0px;
 	padding-top: 20px;
+	margin-top: -20px;
 }
 
 .login__field {
@@ -46,14 +47,14 @@ body{
 	margin-top: 10px;
 	padding: 15px 130px;
 	border-radius: 26px;
-	border: 1px solid #FFFF70;
+	border: 1px solid #dbdbdb;
 	text-transform: uppercase;
 	font-weight: 700;
 	display: flex;
 	align-items: center;
 	width: 100%;
 	color: #000000;
-	box-shadow: 0px 2px 2px #FCF411;
+	box-shadow: 0px 2px 2px #000000;
 	cursor: pointer;
 	transition: .2s;
 }
@@ -90,8 +91,23 @@ body{
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: #FFFF70;
+    background: #ffffff;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
+  }
+  .cada{
+	background: #dbdbdb;
+	height: 70px;
+    width: 400px;
+	margin-left: -40px;
+	margin-top: 30px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	color: #000000;
+	
+  }
+  .txt {
+	  margin-top: -50px;
+	  font-size: smaller;
   }
