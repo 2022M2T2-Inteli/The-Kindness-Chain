@@ -21,7 +21,7 @@ body{
 
 .login__icon {
 	top: 30px;
-	color: #FCF411;
+	color: #ffffff;
 }
 
 .login__input {
@@ -48,7 +48,7 @@ body{
 	margin-top: 10px;
 	padding: 15px 130px;
 	border-radius: 26px;
-	border: 1px solid #a0a000;
+	border: 1px solid #dbdbdb;
 	text-transform: uppercase;
 	font-weight: 700;
 	display: flex;
