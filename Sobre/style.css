@@ -14,6 +14,10 @@
     padding: 10px;
 }
 
+.carousel-slide{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 #pages{
     color: #FFFFFF;
     font-weight: bold;
@@ -35,8 +39,26 @@
   height: 700px;
 }
 
+.redonda1{
+  height: 145px;
+  border-radius: 100%;
+  width: 145px;
+}
+
+.redonda2{
+  height: 145px;
+  border-radius: 100%;
+  width: 145px;
+}
+
+.redonda3 {
+  height: 145px;
+  border-radius:100%;
+  width: 145px;
+}
 
 #dados{
+  font-family: 'Space Grotesk', sans-serif;
   margin-top: 80px;
 }
 
@@ -45,6 +67,17 @@
   margin-top: 15px;
 }
 
+#img1{
+  border-radius: 10%;
+}
+
+#img2{
+  border-radius: 10%;
+}
+
+#img3{
+  border-radius: 10%;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
