@@ -1,0 +1,271 @@
+/*Header*/
+#corpo{
+    background-color: #ffffff;
+}
+
+#logo{
+    height: 70px;
+    border-radius: 10%;
+}
+
+.menu{
+    background-color: #1f1d20;
+    padding: 10px;
+}
+
+#pages{
+    color: #FFFFFF;
+    font-weight: bold;
+}†
+
+.pages{
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.titulo{
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-left: 13px;
+}
+
+.imagem{
+  height: 700px;
+}
+
+
+#dados{
+  margin-top: 80px;
+}
+
+.dadosTit{
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 15px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+.card2{
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  color: black;
+}
+
+
+.imagem{
+  border: 2px solid #1f1d20;
+}
+
+.card3{
+  border: 2px solid #1f1d20;
+}
+
+#titulo2{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Space Grotesk', sans-serif;
+
+}
+
+.titulo3{
+  font-family: 'Space Grotesk', sans-serif;
+  color: #1f1d20;
+}
+
+
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  /* rtl:remove */
+  letter-spacing: -.05rem;
+}
+
+/*Footer*/
+.redes{
+  color: #fCf411;
+}
+
+.linkRodape{
+  font-family: 'Space Grotesk', sans-serif;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.linkRodape:hover{
+  color: #ffff70;
+}
+
+#linkFinal{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#linkFinal:hover{
+  color: #ffff70;
+}
+
+
+
+
+
+.destaque{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.botao{
+  width: 150px;
+  height: 50px;
+  border: #fCf411;
+  background-color: #fCf411;
+  border-radius: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  color: #1f1d20;
+}
+
+.botao:hover{
+  background-color: #ffff70;
+}
+
+.texto3{
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+/*Baseada na Página de Cadastro*/
+
+.login {
+	width: 320px;
+	padding: 0px;
+	padding-top: 20px;
+	
+}
+
+.login__field {
+	padding: 30px 0px;	
+}
+
+.login__icon {
+	top: 30px;
+	color: #ffffff;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #000000;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #ffffff;
+}
+
+.login__submit {
+	background: #fCf411;;
+	font-size: 14px;
+	margin-top: 10px;
+	padding: 15px 130px;
+	border-radius: 26px;
+	border: 1px solid #dbdbdb;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #000000;
+	box-shadow: 0px 2px 2px #ababab;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.menu:active,
+.menu:focus,
+.menu:hover {
+	border-color: #000000;
+	outline: none;
+}
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #000000;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	color: #FFFF70;
+  text-align: center;
+}
+
+.CAD {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+	font-family: 'Space Grotesk', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 450px;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  .cada{
+	background: #dbdbdb;
+	height: 70px;
+    width: 400px;
+	margin-left: -40px;
+	margin-top: 25px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	color: #000000;
+	
+  }
+  .txt {
+	  margin-top: -50px;
+	  font-size: smaller;
+  }
+
+  .style{
+    background-color: #DBDBDB;
+  }
+
+
