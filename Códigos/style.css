@@ -1,49 +1,98 @@
 /*Header*/
-#corpo{
-    background-color: #ffffff;
+#corpo {
+  background-color: #dbdbdb;
 }
 
-#logo{
-    height: 70px;
-    border-radius: 10%;
+#logo {
+  height: 70px;
+  border-radius: 10%;
 }
 
-.menu{
-    background-color: #1f1d20;
-    padding: 10px;
+.menu {
+  background-color: #1f1d20;
+  padding: 10px;
 }
 
-#pages{
-    color: #FFFFFF;
-    font-weight: bold;
+#form {
+  position: relative;
+  top: 30%;
+  left: 10%;
+  transform: translate(-50, -50);
+  border-radius: 10%;
+  padding-top: 10%;
+  padding-bottom: 20%;
+  width: min-content;
 }
 
-.pages{
-    color: #FFFFFF;
-    font-weight: bold;
+.input {
+  min-width: 280px;
+  border-radius: 22px;
+  border: 5px #1f1d20 solid;
+  padding: 5px;
+  margin: 0px 0px 12px -5px;
 }
 
-.titulo{
-  font-family: 'Space Grotesk', sans-serif;
+.input i {
+  font-size: 1.2em;
+  padding: 5px;
+}
+
+.input input {
+  width: 80%;
+  border: none;
+  outline: none;
+  font-family: "Work Sans";
+  background-color: #dbdbdb;
+}
+
+#btn {
+  width: 100%;
+  height: 50%;
+}
+
+#btn button {
+  font-family: "Space Grotesk";
+  background-color: #1f1d20;
+  border-radius: 22px;
+  width: 100%;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+}
+#pages {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.pages {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.titulo {
+  font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 13px;
 }
 
-.imagem{
+.imagem {
   height: 700px;
 }
 
+#btn {
+  padding-top: 10%;
+}
 
-#dados{
+#dados {
   margin-top: 80px;
 }
 
-.dadosTit{
-  font-family: 'Space Grotesk', sans-serif;
+.dadosTit {
+  font-family: "Space Grotesk", sans-serif;
   margin-top: 15px;
 }
-
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -58,14 +107,9 @@
 }
 /* rtl:begin:ignore */
 .marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
-
-
-
-
-
 
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
@@ -76,30 +120,76 @@
   font-weight: 300;
   line-height: 1;
   /* rtl:remove */
-  letter-spacing: -.05rem;
 }
 
 /*Footer*/
-.redes{
-  color: #fCf411;
+.redes {
+  color: #fcf411;
 }
 
-.linkRodape{
-  font-family: 'Space Grotesk', sans-serif;
-  color: #FFFFFF;
+.linkRodape {
+  font-family: "Space Grotesk", sans-serif;
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
 }
 
-.linkRodape:hover{
+.linkRodape:hover {
   color: #ffff70;
 }
 
-#linkFinal{
-  color: #FFFFFF;
+#linkFinal {
+  color: #ffffff;
   text-decoration: none;
 }
 
-#linkFinal:hover{
+#linkFinal:hover {
   color: #ffff70;
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.fundo-title {
+  background-color: #1f1d20;
+  font-family: "Space Grotesk";
+}
+
+#img-1 {
+  border-radius: 10px;
+  padding-left: 10px;
+  width: 68%;
+}
+
+#img-2 {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50%;
+  margin-left: 150px;
+}
+
+#img-3 {
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 62%;
+  margin-left: 248px;
 }
