@@ -12,6 +12,7 @@ img:hover {
 #button2:hover {
   color:black;
 }
+
 table {
     border: 1px solid #ccc;
     border-collapse: collapse;
@@ -46,6 +47,20 @@ table {
   }
   
   @media screen and (max-width: 600px) {
+    .aux {
+      display: flex;
+      flex-direction:row;
+      align-items: center;
+      
+      justify-content: space-around;
+     }
+    #nav {
+      width:100%
+    }
+    body{
+      width:165%
+    }
+   
     table {
       border: 0;
     }
@@ -93,11 +108,12 @@ table {
       border-bottom: 0;
     }
   }
-
+ 
   
   /* general styling */
   body {
     font-family: "Space Grotesk", sans-serif;
     line-height: 1.25;
+   
   }
   
