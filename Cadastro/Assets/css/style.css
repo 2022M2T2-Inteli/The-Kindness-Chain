@@ -142,3 +142,25 @@ body{
 	}
 
   }
+  @media screen and (max-width:400px) {
+	#nav {
+		width: 126%;
+	}
+	.CAD {
+		transform: scale(0.9);
+		top:30%;
+		left:10%;
+		
+	}
+  }
+  @media screen and (max-width:300px) {
+	#nav {
+		width: 148%;
+	}
+	.CAD {
+		transform: scale(0.9);
+		top:30%;
+		left:0%;
+		
+	}
+}
