@@ -94,7 +94,7 @@ body{
     border-radius: 10px;
   }
   .cada{
-	background: #dbdbdb;
+	background: #fffb94;
 	height: 70px;
     width: 400px;
 	margin-left: -40px;
@@ -106,15 +106,39 @@ body{
 	
   }
   .txt {
-	  margin-top: -50px;
+	  position:absolute;
+	  left:20%;
+	  top:102%;
 	  font-size: smaller;
   }
   @media screen and (min-width:900px) {
-	  .CAD {
-		width: 800px;
-	  }
-	  .cada {
-		width: 800px;
-	  }
-	  
+	.CAD {
+		position: absolute;
+		top: 50%;
+		left: 33%;
+		
+	}
+	.cada {
+		height:500px;
+		width: 400px;
+		position: absolute;
+		left:108%;
+		top:-5%;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 0px;
+		border-top-right-radius: 10px;
+		box-shadow: 10px 15px 25px rgba(0,0,0,.6);
+
+	}
+	.txt {
+		
+		left:140%;
+		top:25%;
+		text-align: center;
+		font-size: larger;
+	}
+	.txt:hover {
+		transform:scale(1.1)
+	}
+
   }

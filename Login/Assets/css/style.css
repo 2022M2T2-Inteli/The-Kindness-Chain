@@ -19,14 +19,9 @@ body{
 	padding: 30px 0px;	
 }
 
-.login__icon {
-	top: 30px;
-	color: #FCF411;
-}
-
 .login__input {
 	border: none;
-	border-bottom: 2px solid #000000;
+	border-bottom: 2px solid #dbdbdb;
 	background: none;
 	padding: 10px;
 	padding-left: 24px;
@@ -39,7 +34,7 @@ body{
 .login__input:focus,
 .login__input:hover {
 	outline: none;
-	border-bottom-color: #ffffff;
+	border-bottom-color: #000000;
 }
 
 .login__submit {
@@ -98,7 +93,7 @@ body{
     border-radius: 10px;
   }
   .cada{
-	background: #dbdbdb;
+	background: #fffb94;
 	height: 70px;
     width: 400px;
 	margin-left: -40px;
@@ -109,6 +104,64 @@ body{
 	
   }
   .txt {
-	  margin-top: -50px;
-	  font-size: smaller;
+	position:absolute;
+	left:12%;
+	top:90%;
+	font-size: smaller;
   }
+
+  @media screen and (min-width:900px) {
+	.CAD {
+		position: absolute;
+		top: 50%;
+		left: 30%;
+		
+	}
+	.cada {
+		height:450px;
+		width: 400px;
+		position: absolute;
+		left:108%;
+		top:-6.5%;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 0px;
+		border-top-right-radius: 10px;
+		box-shadow: 10px 15px 25px rgba(0,0,0,.6);
+
+	}
+	.txt {
+		
+		left:135%;
+		top:25%;
+		text-align: center;
+		font-size: larger;
+	}
+	.txt:hover {
+		transform:scale(1.1)
+	}
+	.login__submit{
+		margin-top: 30px;
+	}
+  }
+@media screen and (max-width:400px) {
+	#nav {
+		width: 126%;
+	}
+	.CAD {
+		transform: scale(0.9);
+		top:30%;
+		left:10%;
+		
+	}
+}
+@media screen and (max-width:300px) {
+	#nav {
+		width: 148%;
+	}
+	.CAD {
+		transform: scale(0.9);
+		top:30%;
+		left:0%;
+		
+	}
+}

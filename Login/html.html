@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/f862f4ac75.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/css/style.css">
@@ -12,7 +13,7 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img id="logo" src="Assets/images/logo.png">
@@ -83,18 +84,20 @@
       <form class="login">
   
           <div class="login__field">
-              <i class="login__icon fas fa-user"></i>
+            <i class="fa-solid fa-circle-user" style="margin-right:10px"></i>
+              
               <input type="text" class="login__input" placeholder="Nome de usuário">
           </div>
   
           <div class="login__field">
-              <i class="login__icon fas fa-lock"></i>
+            <i class="fa-solid fa-lock" style="margin-right:10px"></i>
+             
               <input type="password" class="login__input" placeholder="Senha">
           </div>
   
           <button class="button login__submit">
               <span class="button__text">Entrar</span>
-              <i class="button__icon fas fa-chevron-right"></i>
+              
           </button>	
           <div class="cada">
             <p></p> 
@@ -102,7 +105,7 @@
           </div>
           <div class="txt">
           Ainda não tem uma conta?
-            <a href=""> <u>Cadastre-se</u></a>
+            <a href="/PROJETO_INTELI/Modulo 2 Tutorial/Projeto3/Cadastro/html.html"> <u>Cadastre-se</u></a>
           </div>
       </form>    
   </div>
