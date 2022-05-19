@@ -1,5 +1,8 @@
 /*Header*/
 
+
+
+
 #corpo{
     background-color: #ffffff;
 }
@@ -39,6 +42,10 @@
   height: 700px;
 }
 
+img {
+  height: 100%;
+
+}
 .redonda1{
   height: 145px;
   border-radius: 100%;
@@ -69,10 +76,27 @@
 
 #img1{
   border-radius: 10%;
+  margin-left: 250px;
 }
 
 #img2{
   border-radius: 10%;
+  margin-right: 200px;
+  float: right;
+  
+}
+#text1{
+display: inline;
+float: right
+
+}
+.texto{
+  text-align: right;
+  
+}
+
+.featurette-heading{
+  margin-right: 1000px;
 }
 
 #img3{
@@ -95,9 +119,6 @@
   margin-right: .75rem;
   margin-left: .75rem;
 }
-
-
-
 
 
 
