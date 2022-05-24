@@ -4,7 +4,7 @@
 
 
 #corpo{
-    background-color: #ffffff;
+    background-color: white;
 }
 
 #logo{
@@ -97,6 +97,8 @@ float: right
 
 .featurette-heading{
   margin-right: 1000px;
+  background-color: white;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 #img3{
@@ -121,6 +123,26 @@ float: right
 }
 
 
+.body{
+  background-color: white;
+}
+
+.lead{
+  background-color: white;
+  font-family: 'Space Grotesk', sans-serif; 
+}
+
+.header{
+  background-color: white;
+}
+
+.head{
+  background-color: white;
+}
+
+.col-md-6{
+  background-color: white;
+}
 
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
@@ -132,6 +154,7 @@ float: right
   line-height: 1;
   /* rtl:remove */
   letter-spacing: -.05rem;
+  background-color: gray;
 }
 
 /*Footer*/
@@ -162,4 +185,25 @@ float: right
 
 #linkFinal:hover{
   color: #ffff70;
+}
+
+.secao{
+  margin-top: 40px;
+}
+
+.cras
+{
+  width: 80px;
+  height: 80px;
+  margin-left: 120px;
+
+
+
+}
+
+.bruno1
+{
+  margin-top: 50px;
+  justify-content: space-evenly;
+  display: flex;
 }
