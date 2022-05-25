@@ -1,0 +1,34 @@
+body {
+    background-color: #dbdbdb;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: rgb(0, 0, 0);}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+img {
+    border-radius: 20%;
+    transform:scale(0.8);
+    margin-top: 5px;
+    
+}
+#nav {
+    width: 150px;
+    background-color: #1f1d20;
+}
+.icon {
+    color:yellow;
+    transform:scale(2);
+    margin-top:10px
+}
+.txt {
+    color:#dbdbdb;
+    margin-top: 15px;
+}
+.um {
+    margin-top: 20px;
+    
+}
