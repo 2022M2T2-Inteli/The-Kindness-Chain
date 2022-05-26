@@ -1,0 +1,169 @@
+#logo {
+  height: 70px;
+  border-radius: 10%;
+}
+
+img:hover {
+  transform: scale(1.1)
+}
+
+#button1:hover {
+  color: black;
+}
+
+#button2:hover {
+  color: black;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 10px;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* responsive page */
+@media screen and (max-width: 600px) {
+  .aux {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-around;
+  }
+
+  #nav {
+    width: 102%
+  }
+
+  body {
+    width: 100%
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    width: 165%;
+  }
+  #nav {
+    width: 102%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .aux {
+    margin-left: 6px;
+  }
+  #nav {
+    width: 103%;
+  }
+}
+
+/* general styling */
+body {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.25;
+
+}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: rgb(0, 0, 0);}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+img {
+    border-radius: 20%;
+    transform:scale(0.8);
+    margin-top: 5px;
+    
+}
+#nav {
+    width: 150px;
+    background-color: #1f1d20;
+    margin-top: -20px;
+}
+.icon {
+    color:yellow;
+    transform:scale(2);
+    margin-top:10px
+}
+.txt {
+    color:#dbdbdb;
+    margin-top: 15px;
+}
+.um {
+    margin-top: 20px;
+    
+}
