@@ -8,8 +8,8 @@
    font-family: 'Open Sans', sans-serif;
    font-weight: 300;
    line-height: 1.60em;
-   color:#A7A1AE;
-   background-color: white;
+   color:grey;
+   background-color: #dbdbdb;
    
  }
  
@@ -62,7 +62,7 @@ th
  }
  
  .container td {
-       font-weight: normal;
+       font-weight: bold;
        font-size: 1em;
    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
         -moz-box-shadow: 0 2px 2px -2px #0E1119;
@@ -91,16 +91,16 @@ th
    float: right;
  }
  .container tr:nth-child(odd) {
-       background-color: gray;
+       background-color: white;
  }
  
  /* Background-color of the even rows */
  .container tr:nth-child(even) {
-       background-color: gray;
+       background-color: #ffffff;
  }
  
  .container th {
-       background-color: grey;
+       background-color: #fCf411;
  }
  
  .container td:first-child { color: black; }
@@ -115,10 +115,9 @@ th
 }
 #tabela12
 {
-    
     border-radius: 10px;
     margin-left: 150px;
-    background-color: grey;
+    background-color: #dbdbdb;
 }
  
 th {
@@ -132,6 +131,7 @@ td
     width: 5%;
     border-color: #0E1119;
     border-width: 0.5px;
+    
 }
 
  .container tr:hover {

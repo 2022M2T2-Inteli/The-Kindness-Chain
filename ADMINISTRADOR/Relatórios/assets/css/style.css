@@ -152,6 +152,7 @@ img {
 #nav {
     width: 150px;
     background-color: #1f1d20;
+    margin-top: -20px;
 }
 .icon {
     color:yellow;
