@@ -14,7 +14,7 @@ app.post('/userupdate', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-	sql = "UPDATE assistente SET senha = '" + req.body.senha + "' WHERE email = " + req.body.email;
+	sql = "UPDATE assistente SET senha = '" + req.body.senha + "' WHERE email = '" + req.body.email + "'";
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
