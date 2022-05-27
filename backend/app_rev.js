@@ -86,7 +86,7 @@ app.get('/atvusers', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-var sql = 'SELECT * FROM atividades ORDER BY ID COLLATE NOCASE';
+var sql = 'SELECT * FROM atividades ORDER BY IDatv COLLATE NOCASE';
   db.all(sql, [],  (err, rows ) => {
       if (err) {
           throw err;
@@ -191,7 +191,7 @@ app.post('/datainsert', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-  sql = "INSERT INTO ficha (CPF, tempoRua, descrição ,toalha, IDregistro) VALUES ('" + req.body.CPF + "', '" + req.body.tempoRua + "', '" + req.body.descrição + "','" + req.body.toalha + "', '" + req.body.IDregistro + "',)";
+  sql = "INSERT INTO ficha (CPF, tempoRua, descrição ,toalha, IDregistro) VALUES ('" + req.body.CPF + "', '" + req.body.tempoRua + "', '" + req.body.descrição + "','" + req.body.toalha + "', '" + req.body.IDregistro + "')";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [],  err => {
       if (err) {
@@ -265,7 +265,7 @@ app.post('/usercad', urlencodedParser, (req, res) => {
   res.end();
 });
 // altera senha na tabela de assistentes
-app.post('/usercad', urlencodedParser, (req, res) => {
+app.post('/useralter', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
