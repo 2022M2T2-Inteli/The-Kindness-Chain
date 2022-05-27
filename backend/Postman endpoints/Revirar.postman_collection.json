@@ -1,0 +1,540 @@
+{
+	"info": {
+		"_postman_id": "cb0a6f60-dd82-4a59-8010-df5a6561b319",
+		"name": "Revirar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20645506"
+	},
+	"item": [
+		{
+			"name": "retorno tabela atendidoinicial",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1324/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retorno tabela atividades",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:1324/atvusers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"atvusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retorno tabela fichas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1324/usersfichas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"usersfichas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retorno tabela assistente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1324/userassistent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"userassistent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insere registro no atendidoinicial",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nomePessoa",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "nasc",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "educador",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "IDcadastro",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/userinsert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"userinsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insere registro em atividades",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oficina",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "banho",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "lanche",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "IDatv",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/atvinsert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"atvinsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insere registro em ficha",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "CPF",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "tempoRua",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "descrição",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "toalha",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "IDregistro",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/datainsert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"datainsert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insere registro em assistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "senha",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/usercad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"usercad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza registro de oficinas em atividades",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "oficina",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "IDatv",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/userupdateof",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"userupdateof"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza registro de lanches em atividades",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "lanche",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "IDatv",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/userupdatelan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"userupdatelan"
+					],
+					"query": [
+						{
+							"key": "lanches",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza registro banho em atividades",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "banho",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "IDatv",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/userupdateban",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"userupdateban"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza descrição em ficha",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "descrição",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "IDregistro",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/alterdata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"alterdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza senha em assistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "senha",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "saci@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/useralter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"useralter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exclui um registro no atendidoinicial",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "IDcadastro",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/userdelete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"userdelete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exclui registro em fichas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "IDregistro",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/datadelete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"datadelete"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exclui email em assistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "clovis1912@outlook.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:1324/delcad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1324",
+					"path": [
+						"delcad"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
