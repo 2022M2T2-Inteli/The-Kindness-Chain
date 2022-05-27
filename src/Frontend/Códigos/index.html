@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Revirar</title>
+        <link href="../Css/style.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1fddcbf50b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    </head>
+    <body id="corpo">
+        <script src="script.js"></script>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                <img id="logo" src="../Assets/imagens/imagens_home/logo.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="titulo nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="titulo nav-link" href="iniciativas.html">Iniciativas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="titulo nav-link dropdown-toggle" href="doador.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Doador
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="doador.html">Doação Financeira</a></li>
+                        <li><a class="dropdown-item" href="doador.html">Doação de Insumos</a></li>
+                        <li>
+                        <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="doador.html">Transparência</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="titulo nav-link" href="voluntarios.html">Voluntário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="titulo nav-link" href="eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="titulo nav-link dropdown-toggle" href="sobre.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sobre
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="sobre.html">Projeto</a></li>
+                          <li><a class="dropdown-item" href="sobre.html">Galeria</a></li>
+                          <li><a class="dropdown-item" href="sobre.html">Contato</a></li>
+                          <li>
+                          <hr class="dropdown-divider">
+                          </li>
+                          <li><a class="dropdown-item" href="sobre.html">Apoiadores</a></li>
+                        </ul>
+                      </li>
+                </ul>
+                </div>
+            </div>
+            </nav>
+        </header>
+        <main>
+            <section id="apresentarProblema">
+                <article class="primeiraColuna">
+                    <div id="primeiraColuna">
+                        <h1>Em 2021 havia 31.884 pessoas</h1>
+                        <h1>sem-teto na cidade de São Paulo</h1>
+                        <h2>Venha conosco mudar essa realidade</h2>
+                        <button id="primeiroBotao">Participar</button>
+                    </div>
+                </article>
+                <article class="segundaColuna">
+                    <img id="fotoAtendido" src="../Assets/imagens/imagens_home/fotoAtendido.png">
+                    <!--<img id="fotoAtendidoCima" src="fotoAtendidoCima.png">-->
+                </article>
+            </section>
+            <section id="apresentarIniciativas">
+                <article class="primeiraColunaIniciativas">
+                    <img src="../Assets/imagens/imagens_home/iniciativa1.png" id="data-iniciativas" data-iniciativas="left" style="margin-top: 100px;"> <!--data-anime atributo que pode ser usado tanto no css, quanto no JS, vem da esquerda-->
+                    <img src="../Assets/imagens/imagens_home/iniciativa2.png" data-iniciativas="left">
+                </article>
+                <article class="segundaColunaIniciativas">
+                    <img src="../Assets/imagens/imagens_home/iniciativa3.png" data-iniciativas="left">
+                    <img src="../Assets/imagens/imagens_home/iniciativa4.png" data-iniciativas="left">
+                </article>
+                <article class="terceiraColunaIniciativas">
+                    <img src="../Assets/imagens/imagens_home/iniciativa5.png" data-iniciativas="left" style="margin-top: 100px;">
+                    <img src="../Assets/imagens/imagens_home/iniciativa6.png" data-iniciativas="left" style="margin-bottom: 90px;">
+                </article>
+                <article class="quartaColunaIniciativas">
+                    <h1>Conheça nossas iniciativas</h1>
+                    <p>O Projeto Revirar é de grande importância para a população em situação de rua, com as ações que realizamos contribuímos para que o atendido tenha acesso e a garantia dos seus direitos sociais</p>
+                    <button id="botaoIniciativas">Conhecer</button>
+                </article>
+            </section>
+            <section id="apresentarResultados">
+                <article class="primeiraColunaResultados">
+                    <i class="fas fa-utensils"></i>
+                    <h1>6100</h1>
+                    <h2>Lanches Oferecidos</h2>
+                </article>
+                <article class="segundaColunaResultados">
+                    <i class="fas fa-shower"></i>
+                    <h1>1100</h1>
+                    <h2>Banhos Disponibilizados</h2>
+                </article>
+                <article class="terceiraColunaResultados">
+                    <i class="fas fa-users"></i>
+                    <h1>277</h1>
+                    <h2>Pessoas Impactadas</h2>
+                </article>
+                <article class="quartaColunaResultados">
+                    <i class="fas fa-shopping-basket"></i>
+                    <h1>53</h1>
+                    <h2>Cestas Básicas</h2>
+                </article>
+                <article class="quintaColunaResultados">
+                    <i class="fas fa-paste"></i>
+                    <h1>2610</h1>
+                    <h2>Atendimentos Realizados</h2>
+                </article>
+            </section>
+            <section>
+                <h1 id="tituloParticipar">Faça Parte</h1>
+                <h2 id="subtituloParticipar">Nos ajude a transformar a realidade de vida de muitas pessoas</h2>
+            </section>
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                      <a href="voluntarios.html"><img id="direcionarVoluntario" src="../Assets/imagens/imagens_home/botaoVoluntario.png"></a>
+                  </div>
+                  <div class="col">
+                    <a href="doador.html"><img id="direcionarDoador" src="../Assets/imagens/imagens_home/botaoDoador.png"></a>
+                  </div>
+                </div>
+              </div>
+            <!--
+            <section id="apresentarParticipar">
+                <article class="primeiraColunaVoluntario">
+                    <img src="7.png">
+                </article>
+                <article class="segundaColunaDoador">
+                    <img src="6.png">
+                </article>
+            </section>
+            -->
+        </main>
+        <footer class="bg-dark text-light rodape">
+            <div class="container-fluid py-3">
+                <div class="row">
+                  <div class="col-4">
+                    <ul class="nav flex-column">
+                      <li class="nav-link"><a class="linkRodape" href="login.html">Serviço social</a></li>
+                      <li class="nav-link"><a class="linkRodape" href="#">Seja um voluntário</a></li>
+                      <li class="nav-link"><a class="linkRodape" href="#">Seja um doador</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-8">
+                    <p class="texto3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed necessitatibus id asperiores iste fugiat,             praesentium obcaecati explicabo consequatur voluptatem eos earum blanditiis dolorem eaque veritatis libero?               Magni, nam fugiat.
+                    </p>
+                    <ul class="nav">
+                      <li class="nav-link" ><a href="https://adalove.inteli.edu.br/#"><i class="fab fa-facebook fa-3x redes"></i></a></li>
+                      <li class="nav-link"><i class="fab fa-instagram fa-3x redes"></i></li>
+                      <li class="nav-link"><i class="fab fa-whatsapp fa-3x redes"></i></li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+                <div class="text-center" style="background-color: #333; padding: 20px;" >
+                  &copy 2022 Copyright: <a id="linkFinal" href="#">Revirar</a>
+                </div>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</html>
