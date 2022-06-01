@@ -296,20 +296,21 @@
 }
 
 
-.atividadesVol .acoesVoluntarios:hover{
+/* .atividadesVol .acoesVoluntarios:hover{
     color: #fcf411;
-}
+} */
 
-.cardAcoes{
+
+/* .cardAcoes{
     transition: all 0.5s;
     cursor: pointer;
-}
+} */
 
-.cardAcoes:hover{
+/* .cardAcoes:hover{
     color: #fcf411;
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-}
+} */
 
 
 
