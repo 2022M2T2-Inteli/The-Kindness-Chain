@@ -239,18 +239,20 @@ app.post('/assistdelete', urlencodedParser, (req, res) => {
 
 //tabela assistente
 //retorna registro da tabela de assistentes
-app.get('/userassistent', (req, res) => {
+
+app.get('/assistente', (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = 'SELECT * FROM assistente ORDER BY email COLLATE NOCASE';
+  var sql = 'SELECT nome FROM assistente ORDER BY email COLLATE NOCASE';
   db.all(sql, [],  (err, rows ) => {
       if (err) {
           throw err;
       }
       res.json(rows);
   });
+
 
   db.close(); // Fecha o banco
   
@@ -285,6 +287,7 @@ app.post('/useralter', urlencodedParser, (req, res) => {
 	});
 	db.close(); // Fecha o banco 
 });
+
 // deleta email da tabela assistente
 app.post('/delcad', urlencodedParser, (req, res) => {
   res.statusCode = 200;
@@ -301,6 +304,119 @@ app.post('/delcad', urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
 });
 
-app.listen(port, hostname, () => {
+
+  app.post('/userupdate', urlencodedParser, (req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+  
+    sql = "UPDATE assistentes SET (email = '" + req.body.email + + req.body.email + "' WHERE IDassistente = '" + req.body.IDassistesnte+"')";
+    var db = new sqlite3.Database(DBPATH); // Abre o banco
+    db.run(sql, [],  err => {
+        if (err) {
+            throw err;
+        }
+        res.end();
+    });
+    db.close(); // Fecha o banco
+  });
+
+  app.post('/userinsert', urlencodedParser, (req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+  
+    sql = "INSERT INTO assistente (nome, senha, email) VALUES ('" + req.body.nome + "', '" + req.body.senha + "', '" + req.body.email + "')";
+    var db = new sqlite3.Database(DBPATH); // Abre o banco
+    db.run(sql, [],  err => {
+        if (err) {
+            throw err;
+        }
+    });
+    db.close(); // Fecha o banco
+    res.end();
+  });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
+<<<<<<< HEAD
 });
+
+
+app.get('/usereducador', (req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+  var db = new sqlite3.Database(DBPATH); // Abre o banco
+var sql = 'SELECT nome FROM educador ORDER BY IDeducador';
+  db.all(sql, [],  (err, rows ) => {
+      if (err) {
+          throw err;
+      }
+      res.json(rows);
+  });
+  db.close(); // Fecha o banco
+});
+
+// Insere um registro no educador (é o C do CRUD - Create)
+app.post('/educadorinsert', urlencodedParser, (req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+  sql = "INSERT INTO educador (nome, email, senha) VALUES ('" + req.body.nome + "', '" + req.body.email + "', '" + req.body.senha + "')";
+  var db = new sqlite3.Database(DBPATH); // Abre o banco
+  db.run(sql, [],  err => {
+      if (err) {
+          throw err;
+      }
+  });
+  db.close(); // Fecha o banco
+  res.end();
+});
+
+
+// Atualiza um registro no educador (é o U do CRUD - Update)
+app.post('/educadorupdate', urlencodedParser, (req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+  sql = "UPDATE educador SET senha = '" + req.body.senha + "' WHERE IDeducador = '" + req.body.IDeducador +"'";
+  var db = new sqlite3.Database(DBPATH); // Abre o banco
+  db.run(sql, [],  err => {
+      if (err) {
+          throw err;
+      }
+      res.end();
+  });
+  db.close(); // Fecha o banco
+});
+
+// Exclui um registro no educador (é o D do CRUD - Delete)
+app.post('/educadordelete', urlencodedParser, (req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+  sql = "DELETE FROM educador WHERE IDeducador = " + req.body.IDeducador;
+  var db = new sqlite3.Database(DBPATH); // Abre o banco
+  db.run(sql, [],  err => {
+      if (err) {
+          throw err;
+      }
+      res.end();
+  });
+  db.close(); // Fecha o banco
+});
+=======
+  });
+>>>>>>> 07c1390933991cf2520b9adb5f5ec6032e3d92e2
