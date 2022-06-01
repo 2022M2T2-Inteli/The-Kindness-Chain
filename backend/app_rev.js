@@ -170,14 +170,16 @@ app.post("/userupdateban", urlencodedParser, (req, res) => {
   });
   db.close(); // Fecha o banco
 });
-//tabela fichas
-//retorna registro de fichas
-app.get("/usersfichas", (req, res) => {
+
+
+//tabela cadastro
+//retorna registro de cadastro
+app.get("/usersassist", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = "SELECT * FROM ficha ORDER BY IDregistro COLLATE NOCASE";
+  var sql = "SELECT * FROM cadastramento ORDER BY IDregistro COLLATE NOCASE";
   db.all(sql, [], (err, rows) => {
     if (err) {
       throw err;
@@ -186,12 +188,12 @@ app.get("/usersfichas", (req, res) => {
   });
   db.close(); // Fecha o banco
 });
-//insere dado no registro de fichas
-app.post('/datainsert', urlencodedParser, (req, res) => {
+//insere dado no registro de cadastro
+app.post('/assistinsert', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-  sql = "INSERT INTO ficha (CPF, tempoRua, descrição ,toalha, IDregistro) VALUES ('" + req.body.CPF + "', '" + req.body.tempoRua + "', '" + req.body.descrição + "','" + req.body.toalha + "', '" + req.body.IDregistro + "')";
+  sql = "INSERT INTO cadastramento (CPF_RG, nomeSocial, serviçosSociais, dataChegada, motivosRua, serviçosSociaisPassados, encaminhamento, IDcadastro) VALUES ('" + req.body.CPF_RG + "', '" + req.body.nomeSocial + "', '" + req.body.serviçosSociais + "', '" + req.body.dataChegada + "', '" + req.body.motivosRua + "', '" + req.body.serviçosSociaisPassados + "', '" + req.body.encaminhamento + "', '" + req.body.IDcadastro + "')";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [],  err => {
       if (err) {
@@ -201,12 +203,13 @@ app.post('/datainsert', urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
   res.end();
 });
-// altera descrição na tabela fichas
-app.post('/alterdata', urlencodedParser, (req, res) => {
+
+// altera descrição na tabela cadastro
+app.post('/alterassist', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-  sql = "UPDATE ficha SET descrição = '" + req.body.descrição + "' WHERE IDregistro = '" + req.body.IDregistro+"'";
+  sql = "UPDATE cadastramento SET (nomeSocial, serviçosSociais, motivosRua, encaminhamento) = '" + req.body.nomeSocial + "', '" + req.body.serviçosSociais + "', '" + req.body.motivosRua + "', '" + req.body.encaminhamento + "' WHERE IDregistro = '" + req.body.IDregistro+"'";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [],  err => {
       if (err) {
@@ -216,12 +219,12 @@ app.post('/alterdata', urlencodedParser, (req, res) => {
   });
   db.close(); // Fecha o banco
 });
-//deleta registro da tabela fichas
-app.post('/datadelete', urlencodedParser, (req, res) => {
+//deleta registro da tabela cadastro
+app.post('/assistdelete', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
   
-  sql = "DELETE FROM ficha WHERE IDregistro = '" + req.body.IDregistro+"'";
+  sql = "DELETE FROM cadastramento WHERE IDregistro = '" + req.body.IDregistro+"'";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [],  err => {
       if (err) {
@@ -231,6 +234,9 @@ app.post('/datadelete', urlencodedParser, (req, res) => {
   });
   db.close(); // Fecha o banco
 });
+
+
+
 //tabela assistente
 //retorna registro da tabela de assistentes
 app.get('/userassistent', (req, res) => {
