@@ -15,13 +15,13 @@ app.use(express.static("../frontend/"));
 /****** CRUD ******************************************************************/
 
 // Retorna todos registros (é o R do CRUD - Read)
-// tabela atendidoinicial
+// tabela mapeamento
 app.get('/users', (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-var sql = 'SELECT * FROM atendidoinicial ORDER BY IDcadastro COLLATE NOCASE';
+var sql = 'SELECT * FROM mapeamento ORDER BY IDcadastro COLLATE UTF16CI';
   db.all(sql, [],  (err, rows ) => {
       if (err) {
           throw err;
@@ -31,12 +31,12 @@ var sql = 'SELECT * FROM atendidoinicial ORDER BY IDcadastro COLLATE NOCASE';
   db.close(); // Fecha o banco
 });
 
-// Insere um registro no atendidoinicial (é o C do CRUD - Create)
+// Insere um registro no mapeamento (é o C do CRUD - Create)
 app.post('/userinsert', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-  sql = "INSERT INTO atendidoinicial (nomePessoa, nasc, educador) VALUES ('" + req.body.nomePessoa + "', '" + req.body.nasc + "', '" + req.body.educador + "')";
+  sql = "INSERT INTO mapeamento (nomePessoa, tempoRua, localização, outrasInfos) VALUES ('" + req.body.nomePessoa + "', '" + req.body.tempoRua + "', '" + req.body.localização + "', '" + req.body.outrasInfos + "')";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [],  err => {
       if (err) {
@@ -47,12 +47,12 @@ app.post('/userinsert', urlencodedParser, (req, res) => {
   res.end();
 });
 
-// Atualiza um registro no atendidoinicial (é o U do CRUD - Update)
+// Atualiza um registro no mapeamento (é o U do CRUD - Update)
 app.post('/userupdate', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-  sql = "UPDATE atendidoinicial SET educador = '" + req.body.educador + "' WHERE IDcadastro = '" + req.body.IDcadastro+"'";
+  sql = "UPDATE mapeamento SET outrasInfos = '" + req.body.outrasInfos + "' WHERE IDcadastro = '" + req.body.IDcadastro+"'";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [],  err => {
       if (err) {
@@ -63,7 +63,7 @@ app.post('/userupdate', urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
 });
 
-// Exclui um registro no atendidoinicial (é o D do CRUD - Delete)
+// Exclui um registro no mapeamento (é o D do CRUD - Delete)
 app.post('/userdelete', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
