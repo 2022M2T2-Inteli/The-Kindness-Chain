@@ -1,10 +1,5 @@
 #logo {
   height: 70px;
-  border-radius: 10%;
-}
-
-img:hover {
-  transform: scale(1.1)
 }
 
 #button1:hover {
@@ -13,6 +8,9 @@ img:hover {
 
 #button2:hover {
   color: black;
+}
+.text{
+  margin-left: 10.5%;
 }
 
 table {
@@ -23,6 +21,7 @@ table {
   width: 100%;
   table-layout: fixed;
   margin-top: 10px;
+  margin-left: 5%;
 }
 
 table caption {
@@ -114,6 +113,12 @@ table th {
   }
 }
 @media screen and (max-width: 480px) {
+  table {
+  margin-left: 0%;
+}
+.text{
+  margin-left: 0%;
+}
   body {
     width: 165%;
   }
@@ -144,10 +149,15 @@ body {
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 img {
-    border-radius: 20%;
     transform:scale(0.8);
     margin-top: 5px;
     
+}
+table {
+  margin-left: 0%;
+}
+.text{
+  margin-left: 0%;
 }
 #nav {
     width: 150px;

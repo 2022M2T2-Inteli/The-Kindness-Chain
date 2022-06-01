@@ -4,15 +4,14 @@
     background-color: #ffffff;
 }
 
-#logo{
-    height: 70px;
-    border-radius: 10%;
-}
-
 .menu{
     background-color: #1f1d20;
     padding: 10px;
 }
+#tabela {
+  margin-left: 10%;
+}
+
 
 .carousel-slide{
   font-family: 'Space Grotesk', sans-serif;
@@ -152,4 +151,50 @@ table tr{
 
 #linkFinal:hover{
   color: #ffff70;
+}
+
+#input {
+  margin-top: 20px;
+}
+#buscar {
+  margin-top: 20px;
+}
+
+
+#tabela {
+  margin-left: 10%;
+}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: rgb(0, 0, 0);}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0} #tabela {
+  margin-left: 0%;
+}}
+img {
+    transform:scale(0.8);
+    margin-top: 10px;
+    
+}
+
+#nav {
+    width: 150px;
+    height:738px;
+    background-color: #1f1d20;
+    margin-top: -10px;
+}
+.icon {
+    color:yellow;
+    transform:scale(2);
+    margin-top:10px
+}
+.txt {
+    color:#dbdbdb;
+    margin-top: 15px;
+}
+.um {
+    margin-top: 20px;
+    
 }
