@@ -613,3 +613,19 @@ iframe{
     font-weight: bold;
     margin-bottom: 12px;
 }
+
+
+#botaoCadastrar{
+    margin-top: 15px;
+    text-align: center;
+}
+
+#botaoCadastrar a{
+    font-family: 'Space Grotesk', sans-serif;
+    text-decoration: none;
+    color: #1f1d20;
+}
+
+#botaoCadastrar a:hover{
+    color: #25292E;
+}
