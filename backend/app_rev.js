@@ -8,7 +8,7 @@ const sqlite3 = require('sqlite3').verbose();
 const DBPATH = 'dbRev.db'; 
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
-app.use(express.static("../frontend/"));
+app.use(express.static("../src/Frontend/"));
 
 /* Definição dos endpoints */
 
@@ -21,7 +21,7 @@ app.get('/users', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-var sql = 'SELECT * FROM mapeamento ORDER BY IDcadastro COLLATE UTF16CI';
+var sql = 'SELECT * FROM mapeamento ORDER BY IDcadastro COLLATE NOCASE';
   db.all(sql, [],  (err, rows ) => {
       if (err) {
           throw err;

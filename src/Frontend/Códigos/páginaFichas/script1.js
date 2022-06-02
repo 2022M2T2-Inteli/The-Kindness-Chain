@@ -5,10 +5,25 @@ function addProduto(id,nome,estoque,preco){//Metodo para adicionar os produtos n
 }
 
 //Exemplo adicionando os produtos
-addProduto('T8001','Piso Vinílico Porto Design','0m²','R$ 79,90');
-addProduto('T8002','Piso Laminado Durafloor','40m²','R$ 49,90');
-addProduto('T8003','Piso Laminado Eucafloor','33m²','R$ 37,90');
-addProduto('T8004','Porcelanato Eliane','0m²','R$ 102,90');
+const api = "http://localhost:1324"
+$.ajax({
+  url: api + '/users',
+  crossDomain: true,
+  headers: {'Access-Control-Allow-Origin': '*' },
+  type: 'GET',
+  success: data => {
+    data.forEach(element => {
+      addProduto(element.nomePessoa, element.tempoRua, element.IDcadastro, element.localização);
+
+    });
+  }
+});
+
+
+//addProduto(id_produto,'Piso Vinílico Porto Design','0m²','R$ 79,90');
+//addProduto('T8002','Piso Laminado Durafloor','40m²','R$ 49,90');
+//addProduto('T8003','Piso Laminado Eucafloor','33m²','R$ 37,90');
+//addProduto('T8004','Porcelanato Eliane','0m²','R$ 102,90');
 
 $("#input").keypress(function(e){//Adiciona ação de actionkey no input
   if(e.which == 13) {
