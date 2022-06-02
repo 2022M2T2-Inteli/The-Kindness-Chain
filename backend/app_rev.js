@@ -172,6 +172,10 @@ app.post("/userupdateban", urlencodedParser, (req, res) => {
 });
 
 
+
+
+
+
 //tabela cadastro
 //retorna registro de cadastro
 app.get("/usersassist", (req, res) => {
@@ -188,6 +192,7 @@ app.get("/usersassist", (req, res) => {
   });
   db.close(); // Fecha o banco
 });
+
 //insere dado no registro de cadastro
 app.post('/assistinsert', urlencodedParser, (req, res) => {
   res.statusCode = 200;
@@ -209,7 +214,7 @@ app.post('/alterassist', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
-  sql = "UPDATE cadastramento SET (nomeSocial, serviçosSociais, motivosRua, encaminhamento) = '" + req.body.nomeSocial + "', '" + req.body.serviçosSociais + "', '" + req.body.motivosRua + "', '" + req.body.encaminhamento + "' WHERE IDregistro = '" + req.body.IDregistro+"'";
+  sql = "UPDATE cadastramento SET nomeSocial = '"+ req.body.nomeSocial +"', serviçosSociais = '"+ req.body.serviçosSociais +"', motivosRua = '"+ req.body.motivosRua +"', encaminhamento = '"+ req.body.encaminhamento +"' WHERE IDregistro = '" + req.body.IDregistro+"'";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [],  err => {
       if (err) {
@@ -219,6 +224,7 @@ app.post('/alterassist', urlencodedParser, (req, res) => {
   });
   db.close(); // Fecha o banco
 });
+
 //deleta registro da tabela cadastro
 app.post('/assistdelete', urlencodedParser, (req, res) => {
   res.statusCode = 200;
@@ -234,6 +240,10 @@ app.post('/assistdelete', urlencodedParser, (req, res) => {
   });
   db.close(); // Fecha o banco
 });
+
+
+
+
 
 
 
