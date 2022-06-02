@@ -629,3 +629,16 @@ iframe{
 #botaoCadastrar a:hover{
     color: #25292E;
 }
+
+
+
+#selecionarCargo{
+    font-family: 'Space Grotesk', sans-serif;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 12px;
+    width: 100%;
+    background-color: #dbdbdb;
+}
