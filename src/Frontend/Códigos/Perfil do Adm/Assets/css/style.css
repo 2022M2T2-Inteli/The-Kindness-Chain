@@ -4,9 +4,29 @@ body {
 }
  .perfil {
     width: 200px;
-    margin-left: 43%;
+    
     margin-top: 50px;
 } 
+
+/* fundo branco */
+#form {
+    display: block;
+    
+    border-radius: 10%;
+    margin-left: 35%;
+    
+    width: 300px;
+    
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Space Grotesk", sans-serif;
+  
+    background: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+
 .text {
     margin-left:50%;
     padding: 10px;
@@ -17,12 +37,10 @@ body {
 .w3-sidebar {width: 120px;background: rgb(0, 0, 0);}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0;} .perfil { margin-left: 30%;} 
-.text {margin-left:43%}}
+
+
 img {
     transform:scale(0.8);
-    margin-top: 5px;
 }
 #nav {
     width: 150px;
@@ -40,4 +58,13 @@ img {
 .um {
     margin-top: 20px;
     
+}
+@media only screen and (max-width: 600px) {
+    #main {margin-left: 0;} 
+    .perfil { margin-left: 20%;} 
+.text {margin-left:43%} 
+#form {
+    margin-left: 110px;
+}
+
 }
