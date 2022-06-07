@@ -1,0 +1,407 @@
+/* BODY */
+
+#corpo{
+    background-color: #dbdbdb;
+}
+
+/* HEADER */
+
+#logo{
+    height: 70px;
+}
+
+.titulo{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-left: 13px;
+  }
+
+#apresentarProblema{
+    background-size: 100% 650px;
+    background-repeat: no-repeat;
+    background-image: url("../Assets/imagens/imagens_home/primeiraSecao.png");
+    display: grid;
+    grid-template-areas: "um dois";
+    grid-template-columns: auto;
+}
+
+#fotoAtendido{
+    display: block;
+    margin: 30px auto 50px auto;
+    position: relative;
+    width: 60%;
+    border-radius: 10px;
+}
+
+#fotoAtendidoCima:hover{
+    opacity: 0%;
+	transition: 1s all;
+}
+
+#fotoAtendidoCima{
+    display: inline;
+    margin: 0px auto 50px auto;
+    position: relative;
+    width: 60%;
+    border-radius: 10px;
+}
+
+#primeiraColuna{
+    display: block;
+    margin: 20% 0px 0px 15%
+}
+
+.primeiraColuna{
+    grid-area: um;
+}
+
+.segundaColuna{
+    grid-area: dois;
+}
+
+.primeiraColuna h1{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 300%;
+    color: #fcf411;
+}
+
+.primeiraColuna h2{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 200%;
+    color: #dbdbdb;
+}
+
+.primeiraColuna button{
+    margin-top: 40px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    color: #1f1d20;
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    background-color: #fcf411;
+    border-radius: 30px;
+    border: 0px;
+}
+
+.primeiraColuna button:hover{
+    background-color: #ffff70;
+}
+
+@media screen and (max-width: 1024px){
+    #apresentarProblema{
+        display: block;
+    }
+    #apresentarResultados{
+        display: block;
+    }
+}
+
+
+
+
+#apresentarIniciativas{
+    display: grid;
+    grid-template-areas: "a b c d";
+    grid-template-columns: 20% 20% 20% 40%;
+}
+
+.primeiraColunaIniciativas{
+    grid-area: a;
+
+}
+
+.primeiraColunaIniciativas img{
+    display: block;
+    margin: 30px auto 30px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.segundaColunaIniciativas{
+    grid-area: b;
+
+}
+
+.segundaColunaIniciativas img{
+    display: block;
+    margin: 30px auto 30px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.terceiraColunaIniciativas{
+    grid-area: c;
+
+}
+
+.terceiraColunaIniciativas img{
+    display: block;
+    margin: 30px auto 30px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.quartaColunaIniciativas{
+    grid-area: d;
+    padding: 40px;
+
+}
+
+
+
+/*
+[data-iniciativas]{
+    opacity: 0;
+    transition: .3s;
+}
+
+[data-iniciativas="left"]{
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-iniciativas].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+*/
+
+
+
+
+
+
+#apresentarResultados{
+    display: grid;
+    grid-template-areas: "e f g h i";
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+#apresentarResultados h1{
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fcf411;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+#apresentarResultados h2{
+    font-family: 'Space Grotesk', sans-serif;
+    color: #dbdbdb;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.primeiraColunaResultados{
+    background-color: #1f1d20;
+    height: 280px;
+    grid-area: e;
+
+}
+
+i{
+    margin-top: 20%;
+    margin-left: 36%;
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    color: #dbdbdb;
+}
+
+.segundaColunaResultados{
+    background-color: #2b292d;
+    grid-area: f;
+
+}
+
+.terceiraColunaResultados{
+    background-color: #1f1d20;
+    grid-area: g;
+}
+
+.quartaColunaResultados{
+    background-color: #2b292d;
+    grid-area: h;
+}
+
+.quintaColunaResultados{
+    background-color: #1f1d20;
+    grid-area: i;
+}
+
+.icone{
+    width: 100px;
+}
+
+
+
+
+
+
+
+#apresentarParticipar{
+    display: grid;
+    grid-template-areas: "j k";
+    grid-template-columns: 50% 50%;
+}
+
+.primeiraColunaVoluntario{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #dbdbdb;
+    grid-area: j;
+
+}
+
+.segundaColunaDoador{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #dbdbdb;
+    grid-area: k;
+}
+
+.segundaColunaDoador img{
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.primeiraColunaVoluntario img{
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.primeiraColunaVoluntario div{
+    display: block;
+    margin: auto;
+    width: 90%;
+    background-color: #1f1d20;
+    border-radius: 10px;
+
+}
+
+
+
+#tituloParticipar{
+    margin-left: 40px;
+    margin-top: 40px;
+    font-size: 50px;
+    color: 1f1d20;
+    font-family: 'Space Grotesk', sans-serif;  
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#subtituloParticipar{
+    margin-left: 40px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: 2b292d;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.quartaColunaIniciativas h1{
+    margin-top: 25%;
+    font-size: 50px;
+    text-align: left;
+    font-family: 'Space Grotesk', sans-serif;  
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.quartaColunaIniciativas p{
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;  
+    font-weight: bold;
+
+}
+
+#botaoIniciativas{
+    /*
+    margin-top: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    color: #fcf411;
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    background-color: #1f1d20;
+    border-radius: 30px;
+    border: 0px;
+    */
+    margin-top: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: bold;
+    color: #1f1d20;
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    background-color: #fcf411;
+    border-radius: 30px;
+    border: 0px;
+}
+
+#botaoIniciativas:hover{
+    background-color: #ffff70;
+}
+
+
+
+
+/*Footer*/
+.redes{
+    color: #fCf411;
+  }
+  
+  .linkRodape{
+    font-family: 'Space Grotesk', sans-serif;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .linkRodape:hover{
+    color: #ffff70;
+  }
+  
+  #linkFinal{
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  #linkFinal:hover{
+    color: #ffff70;
+  }
+
+  footer{
+      margin-top: 40px;
+  }
+
+
+
+#direcionarVoluntario{
+    background-image: url("Assets/imagens/imagens_home/botaoVoluntario.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 18px;
+
+}
+
+#direcionarDoador{
+    margin-top: 18px;
+    background-image: url("Assets/imagens/imagens_home/botaoDoador.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 10px;
+}
