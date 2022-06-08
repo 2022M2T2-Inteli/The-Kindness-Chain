@@ -5,32 +5,30 @@ body {
  .perfil {
     width: 200px;
     
-    margin-top: 50px;
+    margin-top: 20px;
+    border-radius: 20px;
 } 
 
 /* fundo branco */
 #form {
     display: block;
-    
+
+    text-align: center;
+   
+   
     border-radius: 10%;
-    margin-left: 35%;
-    
-    width: 300px;
+    margin-left: 30%;
+    height: 500px;
+    width: 400px;
     
     font-size: larger;
-    font-weight: bold;
+    font-weight: bolder;
     font-family: "Space Grotesk", sans-serif;
   
     background: #ffffff;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-  }
-
-.text {
-    margin-left:50%;
-    padding: 10px;
-    font-weight: bolder;
 }
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
@@ -61,10 +59,6 @@ img {
 }
 @media only screen and (max-width: 600px) {
     #main {margin-left: 0;} 
-    .perfil { margin-left: 20%;} 
-.text {margin-left:43%} 
-#form {
-    margin-left: 110px;
-}
+    #form {margin-left:10%}
 
 }
