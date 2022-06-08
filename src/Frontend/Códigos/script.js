@@ -40,13 +40,8 @@ if(target.length) {
 
 
 
-
+/*
 $(document).ready(function(){
-       
-  $("#header").load("menu.html", function() {
-      $("#btn").on('click', showmenu);
-  });
+  $("#header").load("header.html");
 });
-function showmenu(){
-  nav.classList.toggle('active');
-}
+*/

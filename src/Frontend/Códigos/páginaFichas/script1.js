@@ -37,13 +37,14 @@ $("#buscar").click(function(){//Adiciona ação ao botão
 });
 
 function buscar(){//Função responsavel de buscar os produtos
+  $('tbody').html("");
   var p_listados=0;//Inicia contador de produtos encontrados
   $('.pessoas').remove();//Limpa a lista de produtos
   var txtbusca=$("#input").val().toLowerCase();//Captura texto digitado e converte para minusculo
   //Percorre a lista de produtos e imprime ocorrencias verdadeiras
   for(var i=0;i<pessoas.length;i++){
     var nome=pessoas[i].nome.toLowerCase();
-    var cod=pessoas[i].id.toLowerCase();//TA DANDO ERRO AQ
+    var cod=pessoas[i].id;
     if(nome.match(txtbusca)){//Busca por nome
       listarPessoas(i);
       p_listados++;
@@ -56,6 +57,7 @@ function buscar(){//Função responsavel de buscar os produtos
   $('#p_total').html(pessoas.length);//Mostra quantidade total de produtos cadastrados
 }
  function listarPessoas(i){//Lista o produto do indece do array produto informado
+  
     if(i!=null){
       $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td></tr>");
     }
