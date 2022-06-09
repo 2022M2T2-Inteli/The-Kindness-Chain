@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Assets/css/style.css">
+<link rel="stylesheet" href="script.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script src="https://kit.fontawesome.com/1fddcbf50b.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
@@ -15,7 +17,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
+<body onload="TestGETDB()">
+  <script src="script.js"></script>
 
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
@@ -64,8 +67,8 @@
   <img src="Assets/images/logo.png" class="perfil">
   <br><br>
   <div class="text">
-   <div>Nome Nome Nome</div> <br>
-  <div>contato@gmail.com</div> <br>
+   <div id="nome"></div> <br>
+  <div id="email"></div> <br>
   <div style="font-weight:lighter"> Mudar senha </div><br>
   <button style="border-radius:20%; width: 30%; ">Sair</button>
 </div>
