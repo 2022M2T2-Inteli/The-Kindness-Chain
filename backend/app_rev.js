@@ -31,7 +31,7 @@ app.get("/users", (req, res) => {
 });
 
 // Insere um registro no mapeamento (é o C do CRUD - Create)
-app.post("/userinsert", urlencodedParser, (req, res) => {
+app.post("/mapinsert", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
