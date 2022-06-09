@@ -44,7 +44,11 @@ function buscar(){//Função responsavel de buscar os produtos
   //Percorre a lista de produtos e imprime ocorrencias verdadeiras
   for(var i=0;i<pessoas.length;i++){
     var nome=pessoas[i].nome.toLowerCase();
+<<<<<<< Updated upstream
     var cod=pessoas[i].id;
+=======
+    var cod=pessoas[i].id.toLowerCase();//TA DANDO ERRO AQ
+>>>>>>> Stashed changes
     if(nome.match(txtbusca)){//Busca por nome
       listarPessoas(i);
       p_listados++;
@@ -57,7 +61,10 @@ function buscar(){//Função responsavel de buscar os produtos
   $('#p_total').html(pessoas.length);//Mostra quantidade total de produtos cadastrados
 }
  function listarPessoas(i){//Lista o produto do indece do array produto informado
+<<<<<<< Updated upstream
   
+=======
+>>>>>>> Stashed changes
     if(i!=null){
       $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td></tr>");
     }
