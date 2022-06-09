@@ -297,21 +297,12 @@ app.get("/assistente", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-<<<<<<< Updated upstream
-  var sql = "SELECT nome FROM assistente ORDER BY email COLLATE NOCASE";
-  db.all(sql, [], (err, rows) => {
-    if (err) {
-      throw err;
-    }
-    res.json(rows);
-=======
   var sql = 'SELECT * FROM assistente ORDER BY IDassistente';
   db.all(sql, [],  (err, rows ) => {
       if (err) {
           throw err;
       }
       res.json(rows);
->>>>>>> Stashed changes
   });
 
   db.close(); // Fecha o banco
@@ -417,18 +408,18 @@ app.post("/userinsert", urlencodedParser, (req, res) => {
 });
 
 // EDUCADOR
-<<<<<<< Updated upstream
-app.get("/usereducador", (req, res) => {
+
+app.get('/usereducador', (req, res) => {
   res.statusCode = 200;
-  res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = "SELECT nome FROM educador ORDER BY IDeducador";
-  db.all(sql, [], (err, rows) => {
-    if (err) {
-      throw err;
-    }
-    res.json(rows);
+var sql = 'SELECT * FROM educador ORDER BY IDeducador';
+  db.all(sql, [],  (err, rows ) => {
+      if (err) {
+          throw err;
+      }
+      res.json(rows);
   });
   db.close(); // Fecha o banco
 });
@@ -473,21 +464,6 @@ app.post("/educadorupdate", urlencodedParser, (req, res) => {
       throw err;
     }
     res.end();
-=======
-  app.get('/usereducador', (req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
-  
-    var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = 'SELECT * FROM educador ORDER BY IDeducador';
-    db.all(sql, [],  (err, rows ) => {
-        if (err) {
-            throw err;
-        }
-        res.json(rows);
-    });
-    db.close(); // Fecha o banco
->>>>>>> Stashed changes
   });
   db.close(); // Fecha o banco
 });
