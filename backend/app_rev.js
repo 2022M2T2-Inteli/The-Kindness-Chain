@@ -272,7 +272,7 @@ app.post('/usercad', urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*');
 
-  sql = "INSERT INTO assistente (email, senha) VALUES ('" + req.body.email + "', '" + req.body.senha + "')";
+  sql = "INSERT INTO assistente (nome, email, senha) VALUES ('" + req.body.nome + "','" + req.body.email + "', '" + req.body.senha + "')";
   var db = new sqlite3.Database(DBPATH);
   db.run(sql, [],  err => {
       if (err) {
