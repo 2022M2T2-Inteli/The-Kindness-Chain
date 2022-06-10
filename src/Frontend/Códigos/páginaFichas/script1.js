@@ -58,7 +58,7 @@ function buscar(){//Função responsavel de buscar os produtos
 }
  function listarPessoas(i){//Lista o produto do indece do array produto informado
     if(i!=null){
-      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td></tr>");
+      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
     }
   }
 

@@ -198,3 +198,54 @@ img {
     margin-top: 20px;
     
 }
+
+
+.cadastrar{
+  font-size: 15px;
+  width: 80px;
+  padding: 5px;
+  /*background-color: #129f1e;*/
+  background-color: #1f1d20;
+  color: #fCf411;
+  border-radius: 10px;
+}
+
+.cadastrar:hover{
+  background-color: #10891a;
+}
+
+.alterar{
+  font-size: 15px;
+  width: 80px;
+  padding: 5px;
+  /*background-color: yellow;*/
+  background-color: #1f1d20;
+  color: #fCf411;
+}
+
+.alterar:hover{
+  background-color: rgb(230, 230, 29);
+}
+
+.deletar{
+  font-size: 15px;
+  width: 80px;
+  padding: 5px;
+  background-color: #1f1d20;
+  /*background-color: #d32222;*/
+  color: #fCf411;
+}
+
+.deletar:hover{
+  background-color: #b61b1b;
+}
+
+#mapeamento{
+  background-color: #1f1d20;
+  color: #fCf411;
+  padding: 10px;
+  border-radius: 100px;
+  margin-top: 17px;
+  margin-left: 10px;
+  height: 40px;
+}
