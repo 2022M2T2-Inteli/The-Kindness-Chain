@@ -181,9 +181,9 @@ img {
 
 #nav {
     width: 150px;
-    height:738px;
+    
     background-color: #1f1d20;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 .icon {
     color:yellow;
