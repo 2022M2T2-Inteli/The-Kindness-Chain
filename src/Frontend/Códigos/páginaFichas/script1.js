@@ -37,13 +37,14 @@ $("#buscar").click(function(){//Adiciona ação ao botão
 });
 
 function buscar(){//Função responsavel de buscar os produtos
+  $('tbody').html("");
   var p_listados=0;//Inicia contador de produtos encontrados
   $('.pessoas').remove();//Limpa a lista de produtos
   var txtbusca=$("#input").val().toLowerCase();//Captura texto digitado e converte para minusculo
   //Percorre a lista de produtos e imprime ocorrencias verdadeiras
   for(var i=0;i<pessoas.length;i++){
     var nome=pessoas[i].nome.toLowerCase();
-    var cod=pessoas[i].id.toLowerCase();//TA DANDO ERRO AQ
+    var cod=pessoas[i].id;
     if(nome.match(txtbusca)){//Busca por nome
       listarPessoas(i);
       p_listados++;

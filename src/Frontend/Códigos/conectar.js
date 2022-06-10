@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
+/*$(document).ready(function(){
+    $("#header").load("header.html");
+});
+*/
+=======
 $(document).ready(function(){
 
     $("#header").load("header.html", function() {
@@ -9,3 +15,4 @@ $(document).ready(function(){
     function showmenu(){
     nav.classList.toggle('active');
     }
+>>>>>>> Stashed changes

@@ -390,7 +390,7 @@ i{
 
 
 #direcionarVoluntario{
-    background-image: url("Assets/imagens/imagens_home/botaoVoluntario.png");
+    background-image: url("../Assets/imagens/imagens_home/botaoVoluntario.png");
     background-repeat: no-repeat;
     width: 100%;
     border-radius: 10px;
@@ -400,7 +400,7 @@ i{
 
 #direcionarDoador{
     margin-top: 18px;
-    background-image: url("Assets/imagens/imagens_home/botaoDoador.png");
+    background-image: url("../Assets/imagens/imagens_home/botaoDoador.png");
     background-repeat: no-repeat;
     width: 100%;
     border-radius: 10px;

@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Assets/css/style.css">
+<link rel="stylesheet" href="script.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script src="https://kit.fontawesome.com/1fddcbf50b.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
@@ -15,33 +17,35 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
+<body onload="TestGETDB()">
+  <script src="script.js"></script>
+
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav id="nav" class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="Assets/images/logo.png" style="width:100%">
 <div style="margin-top:20px">
-  <a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
+  <a href="" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
     <i class="fa-solid fa-user icon"></i>
     <p class="txt">PERFIL</p>
   </a>
   
-  <a href="/Mapeamento/mapeamento.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
+  <a href="../Mapeamento/mapeamento.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
     <i class="fa-solid fa-address-card icon"></i>
     <p class="txt">MAPEAMENTO</p>
   </a>
-  <a href="/Ficha/lista.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
+  <a href="../páginaFichas/lista.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
     <i class="fa-solid fa-address-book icon"></i>
-    <p class="txt">FICHAS</p>
+    <p class="txt">ATENDIDOS</p>
   </a>
-  <a href="/Relatórios/index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
+  <a href="../Relatórios/index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
     <i class="fa-solid fa-id-badge icon"></i>
     <p class="txt">RELATÓRIOS</p>
   </a>
-  <a href="../páginaFichas/lista.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
+  <a href="" class="w3-bar-item w3-button w3-padding-large w3-hover-black um">
     <i class="fa-solid fa-handshake-angle icon"></i>
-    <p class="txt">VOLUNTÁRIO</p>
+    <p class="txt">VOLUNTÁRIOS</p>
   </a>
 </div>
 </nav>
@@ -50,23 +54,23 @@
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:20% !important">PERFIL</a>
-    <a href="/Mapeamento/mapeamento.html" class="w3-bar-item w3-button" style="width:20% !important">MAPEAMENTO</a>
-    <a href="/Ficha/lista.html" class="w3-bar-item w3-button" style="width:20% !important">FICHAS</a>
-    <a href="/Relatórios/index.html" class="w3-bar-item w3-button" style="width:20% !important">RELATÓRIOS</a>
+    <a href="../Mapeamento/mapeamento.html" class="w3-bar-item w3-button" style="width:20% !important">MAPEAMENTO</a>
+    <a href="../páginaFichas/lista.html" class="w3-bar-item w3-button" style="width:20% !important">ATENDIDOS</a>
+    <a href="../Relatórios/index.html" class="w3-bar-item w3-button" style="width:20% !important">RELATÓRIOS</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">VOLUNTÁRIOS</a>
 
   </div>
 </div>
 
 
- <div id="form" >
+<div id="form">
   <img src="Assets/images/logo.png" class="perfil">
   <br><br>
   <div class="text">
-   <div>Nome</div> <br>
-  <div>Email</div> <br>
-  <div style="font-weight:lighter"> Mudar email </div><br>
-  <button style="border-radius:20%; width: 30%; ">Sair</button>
+   <div id="nome"></div> <br>
+  <div id="email"></div> <br>
+  <div style="font-weight:lighter"> Mudar senha </div><br>
+  <a href="../login.html"><button style="border-radius:20%; width: 30%; ">Sair</button></a>
 </div>
                   
                    

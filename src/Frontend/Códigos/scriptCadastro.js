@@ -1,9 +1,8 @@
 api = 'http://localhost:1324'
 
-
-//$(document).ready(() => {
-   // users.list();
-//});
+$(document).ready(() => {
+   users.list();
+});
 
 var user = {
 
