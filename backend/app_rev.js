@@ -11,9 +11,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(express.static("../src/Frontend/"));
 
 /* Definição dos endpoints */
-
 /****** CRUD ******************************************************************/
-
 // Retorna todos registros (é o R do CRUD - Read)
 // tabela mapeamento
 app.get('/users', (req, res) => {
