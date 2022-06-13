@@ -27,11 +27,14 @@ var map = {
     },
 
     update(IDcadastro, oldNomePessoa, oldTempoRua, oldLocalização, oldOutrasInfos) {
-
-        var nomePessoa = document.getElementById("nomePessoa").value.trim(oldNomePessoa);
-        var tempoRua = document.getElementById("tempoRua").value.trim(oldTempoRua);
-        var localização = document.getElementById("localização").value.trim(oldLocalização);
-        var outrasInfos = document.getElementById("outrasInfos").value.trim(oldOutrasInfos);
+        document.querySelector("[name='nome']").value = "ola";
+        document.querySelector("[name='tempo']").value = oldTempoRua;
+        document.querySelector("[name='local']").value = oldLocalização;
+        document.querySelector("[name='info']").value = oldOutrasInfos;
+        //var nomePessoa = document.getElementById("nomePessoa").value.trim(oldNomePessoa);
+        //var tempoRua = document.getElementById("tempoRua").value.trim(oldTempoRua);
+        //var localização = document.getElementById("localização").value.trim(oldLocalização);
+        //var outrasInfos = document.getElementById("outrasInfos").value.trim(oldOutrasInfos);
         //var nomePessoa = prompt('Digite o novo nome:', oldTitle);
         if (title) {
             if (title.trim() != '') {
