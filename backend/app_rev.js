@@ -79,7 +79,7 @@ app.post("/userdelete", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
-  sql = "DELETE FROM atendidoinicial WHERE IDcadastro = " + req.body.IDcadastro;
+  sql = "DELETE FROM mapeamento WHERE IDcadastro = " + req.body.IDcadastro;
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
     if (err) {

@@ -58,9 +58,51 @@ function buscar(){//Função responsavel de buscar os produtos
 }
  function listarPessoas(i){//Lista o produto do indece do array produto informado
     if(i!=null){
-      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
+      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='user.update(" + pessoas[i].id + "'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
     }
   }
 
 
 buscar();//Inicializa mostrando todos os itens existentes
+
+
+var user = {
+
+  update(userId, oldTitle) {
+
+      var title = prompt('Digite o novo nome:', oldTitle);
+      if (title) {
+          if (title.trim() != '') {
+              $.ajax({
+                  type: 'POST',
+                  url: api + '/userupdate',
+                  data: {title: title, userId: userId},
+              }).done(function () {
+                  users.list();
+              }).fail(function (msg) {
+                  //console.log('FAIL');
+              }).always(function (msg) {
+                  //console.log('ALWAYS');
+              });
+          }
+      }
+  },
+
+  delete(userId) {
+
+      if (confirm('Confirma a exclusão?')) {
+          $.ajax({
+              type: 'POST',
+              url: api + '/userdelete',
+              data: {IDcadastro: userId},
+          }).done(function () {
+              users.list();
+          }).fail(function (msg) {
+              //console.log('FAIL');
+          }).always(function (msg) {
+              //console.log('ALWAYS');
+          });
+      }
+  },
+
+}
