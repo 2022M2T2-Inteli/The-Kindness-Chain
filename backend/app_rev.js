@@ -59,8 +59,8 @@ app.post("/userupdate", urlencodedParser, (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   sql =
-    "UPDATE mapeamento SET outrasInfos = '" +
-    req.body.outrasInfos +
+    "UPDATE mapeamento SET nomePessoa = '" +
+    req.body.nomePessoa + "', tempoRua = '" +req.body.tempoRua+ "', outrasInfos = '" +req.body.outrasInfos+"', localização = '"+req.body.localização
     "' WHERE IDcadastro = '" +
     req.body.IDcadastro +
     "'";
