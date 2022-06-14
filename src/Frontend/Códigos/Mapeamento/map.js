@@ -28,13 +28,12 @@ var map = {
 
     update(IDcadastro, oldNomePessoa, oldTempoRua, oldLocalização, oldOutrasInfos) {
 
-        var nomePessoa = document.getElementById("nomePessoa").value.trim(oldNomePessoa);
-        var tempoRua = document.getElementById("tempoRua").value.trim(oldTempoRua);
-        var localização = document.getElementById("localização").value.trim(oldLocalização);
-        var outrasInfos = document.getElementById("outrasInfos").value.trim(oldOutrasInfos);
+        var nomePessoa = document.getElementById("nomePessoa").value(oldNomePessoa).trim();
+        var tempoRua = document.getElementById("tempoRua").value(oldTempoRua).trim();
+        var localização = document.getElementById("localização").value(oldLocalização).trim();
+        var outrasInfos = document.getElementById("outrasInfos").value(oldOutrasInfos).trim();
         //var nomePessoa = prompt('Digite o novo nome:', oldTitle);
-        if (title) {
-            if (title.trim() != '') {
+        if (nomePessoa && tempoRua && localização && outrasInfos) {
                 $.ajax({
                     type: 'POST',
                     url: api + '/userupdate',
@@ -46,6 +45,5 @@ var map = {
                 }).always(function (msg) {
                     //console.log('ALWAYS');
                 });
-            }
         }
     }};
