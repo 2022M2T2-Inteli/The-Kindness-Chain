@@ -59,8 +59,8 @@ app.post("/userupdate", urlencodedParser, (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   sql =
-    "UPDATE mapeamento SET outrasInfos = '" +
-    req.body.outrasInfos +
+    "UPDATE mapeamento SET nomePessoa = '" +
+    req.body.nomePessoa + "', tempoRua = '" +req.body.tempoRua+ "', outrasInfos = '" +req.body.outrasInfos+"', localização = '"+req.body.localização
     "' WHERE IDcadastro = '" +
     req.body.IDcadastro +
     "'";
@@ -79,7 +79,7 @@ app.post("/userdelete", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
-  sql = "DELETE FROM atendidoinicial WHERE IDcadastro = " + req.body.IDcadastro;
+  sql = "DELETE FROM mapeamento WHERE IDcadastro = " + req.body.IDcadastro;
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
     if (err) {
