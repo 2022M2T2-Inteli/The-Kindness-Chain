@@ -584,6 +584,9 @@ app.post("/delficha", urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
 });
 
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(process.env.PORT,() => {
+  console.log(`Server running`);
 });
+// app.listen(port, hostname, () => {
+//   console.log(`Server running at http://${hostname}:${port}/`);
+// });
