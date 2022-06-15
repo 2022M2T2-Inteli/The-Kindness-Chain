@@ -584,9 +584,59 @@ app.post("/delficha", urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
 });
 
-app.listen(process.env.PORT,() => {
-  console.log(`Server running`);
+//VOLUNTÁRIOS
+
+app.get("/getvol", (req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+
+  var db = new sqlite3.Database(DBPATH); // Abre o banco
+  var sql = "SELECT * FROM voluntario ORDER BY IDvoluntario";
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    res.json(rows);
+  });
+  db.close(); // Fecha o banco
 });
-// app.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
+
+app.post("/volinsert", urlencodedParser, (req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+
+  sql =
+    "INSERT INTO voluntario (atividade, nome, contato, disponibilidade) VALUES ('" + req.body.atividade + "', '" + req.body.nome + "', '" + req.body.contato + "', '" + req.body.disponibilidade + "')";
+  var db = new sqlite3.Database(DBPATH); // Abre o banco
+  db.run(sql, [], (err) => {
+    if (err) {
+      throw err;
+    }
+  });
+  db.close(); // Fecha o banco
+  res.end();
+});
+
+app.post("/voldelete", urlencodedParser, (req, res) => {
+  res.statusCode = 200;
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
+
+  sql = "DELETE FROM voluntario WHERE IDvoluntario = " + req.body.IDvoluntario;
+  var db = new sqlite3.Database(DBPATH); // Abre o banco
+  db.run(sql, [], (err) => {
+    if (err) {
+      throw err;
+    }
+    res.end();
+  });
+  db.close(); // Fecha o banco
+});
+
+//app.listen(process.env.PORT,() => {
+//  console.log(`Server running`);
+//});
+app.listen(port, hostname, () => {
+   console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+

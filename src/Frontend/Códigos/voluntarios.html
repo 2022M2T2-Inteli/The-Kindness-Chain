@@ -154,27 +154,23 @@
                                 <i class="fa-solid fa-handshake-angle"></i>
                                 <input id="ativVol" name="ativVol" type="text" />
                               </div>
-                
                               <label for="">Nome</label>
                               <div class="input">
                                 <i class="fa-solid fa-user"></i>
                                 <input id="nome" name="nome" type="text" />
                               </div>
-                
                               <label for="">Contato</label>
                               <div class="input">
                                 <i class="fa-solid fa-phone"></i>
                                 <input id="contato" name="contato" type="text" />
                               </div>
-                
                               <label for="">Disponibilidade</label>
                               <div class="input">
                                 <i class="fa-regular fa-calendar-days"></i>
                                 <input id="disp" name="disp" type="text" />
                               </div>
-                
                               <div id="btn">
-                                <button type="submit">Cadastrar</button>
+                                <button onclick="vol.insert()">Cadastrar</button>
                               </div>
                             </form>
                           </div>
@@ -214,5 +210,8 @@
                 </div>
         </footer>
     </body>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
