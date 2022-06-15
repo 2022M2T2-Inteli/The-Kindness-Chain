@@ -60,10 +60,14 @@ app.post("/userupdate", urlencodedParser, (req, res) => {
 
   sql =
     "UPDATE mapeamento SET nomePessoa = '" +
-    req.body.nomePessoa + "', tempoRua = '" +req.body.tempoRua+ "', outrasInfos = '" +req.body.outrasInfos+"', localização = '"+req.body.localização
-    "' WHERE IDcadastro = '" +
-    req.body.IDcadastro +
-    "'";
+    req.body.nomePessoa +
+    "', tempoRua = '" +
+    req.body.tempoRua +
+    "', outrasInfos = '" +
+    req.body.outrasInfos +
+    "', localização = '" +
+    req.body.localização;
+  "' WHERE IDcadastro = '" + req.body.IDcadastro + "'";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
     if (err) {
@@ -295,12 +299,12 @@ app.get("/assistente", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = 'SELECT * FROM assistente ORDER BY IDassistente';
-  db.all(sql, [],  (err, rows ) => {
-      if (err) {
-          throw err;
-      }
-      res.json(rows);
+  var sql = "SELECT * FROM assistente ORDER BY IDassistente";
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    res.json(rows);
   });
 
   db.close(); // Fecha o banco
@@ -407,17 +411,17 @@ app.post("/userinsert", urlencodedParser, (req, res) => {
 
 // EDUCADOR
 
-app.get('/usereducador', (req, res) => {
+app.get("/usereducador", (req, res) => {
   res.statusCode = 200;
-  res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+  res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
-var sql = 'SELECT * FROM educador ORDER BY IDeducador';
-  db.all(sql, [],  (err, rows ) => {
-      if (err) {
-          throw err;
-      }
-      res.json(rows);
+  var sql = "SELECT * FROM educador ORDER BY IDeducador";
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      throw err;
+    }
+    res.json(rows);
   });
   db.close(); // Fecha o banco
 });
@@ -528,6 +532,7 @@ app.post("/inficha", urlencodedParser, (req, res) => {
   });
   db.close(); // Fecha o banco
   res.end();
+  location.replace("/páginaFichas/lista.html");
 });
 
 // Atualiza um registro no atendidoinicial (é o U do CRUD - Update)
