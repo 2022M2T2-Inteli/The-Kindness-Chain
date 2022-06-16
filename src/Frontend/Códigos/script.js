@@ -172,3 +172,110 @@ function buscar(){//Função responsavel de buscar os produtos
 buscar();//Inicializa mostrando todos os itens existentes
 
 
+
+var maps = {
+  list(IDvoluntario) {
+    console.log("OLA");
+      $.ajax({
+          url: api + '/users',
+          type: 'GET',
+          success: data => {
+              data.forEach(element => {
+                if(IDvoluntario == element.IDvoluntario){
+                var tx = '';
+                  tx += '<div class="CAD" style="height:600px; margin-top: 20px;"> Mapeamento';
+                    tx += '<form class="login" style="padding:0px;">';
+                      tx += '<div class="login__field">';
+                        tx += '<i class="login__icon fas fa-user"></i>';
+                        tx += '<input id="nomePessoa" type="text" class="login__input" placeholder="${element.nomeCad}" value="${element.nomeCad}" name="nome">';
+                      tx += '</div>';
+              
+                    tx += '<div class="login__field">';
+                      tx += '<i class="login__icon fas fa-user"></i>';
+                      tx += '<input id="tempoRua" type="text" class="login__input" placeholder="Tempo de Rua" name="tempo">';
+                    tx += '</div>';
+              
+                    tx += '<div class="login__field">';
+                      tx += '<i class="login__icon fas fa-user"></i>';
+                      tx += '<input id="localização" type="text" class="login__input" placeholder="Localização" name="local">';
+                    tx += '</div>';
+              
+                    tx += '<div class="login__field">';
+                      tx += '<i class="login__icon fas fa-user"></i>';
+                      tx += '<input id="outrasInfos" type="text" class="login__input" placeholder="Outras Informações" name="info">';
+                    tx += '</div>';
+              
+                    tx += '<button onclick="map.insert()" class="button login__submit ">';
+                      tx += '<span class="button__text">Cadastrar</span>';
+                      tx += '<i class="button__icon fas fa-chevron-right"></i>';
+                    tx += '</button>';
+                    tx += '</form>';
+                  tx += '</div>';
+                  document.getElementById("atualizar").innerHTML += tx;
+                }
+              });
+          }
+      });
+      
+  }
+  
+};
+
+
+//Atualizar o mapeamento
+var map = {
+
+  update(IDcadastro, oldNomePessoa, oldTempoRua, oldLocalização, oldOutrasInfos) {
+    /*
+    var tx = '';
+    tx += '<div class="CAD" style="height:600px; margin-top: 20px;"> Mapeamento';
+      tx += '<form class="login" style="padding:0px;">';
+        tx += '<div class="login__field">';
+          tx += '<i class="login__icon fas fa-user"></i>';
+          tx += '<input id="nomePessoa" type="text" class="login__input" placeholder="${element.nomeCad}" value="${element.nomeCad}" name="nome">';
+        tx += '</div>';
+
+      tx += '<div class="login__field">';
+        tx += '<i class="login__icon fas fa-user"></i>';
+        tx += '<input id="tempoRua" type="text" class="login__input" placeholder="Tempo de Rua" name="tempo">';
+      tx += '</div>';
+
+      tx += '<div class="login__field">';
+        tx += '<i class="login__icon fas fa-user"></i>';
+        tx += '<input id="localização" type="text" class="login__input" placeholder="Localização" name="local">';
+      tx += '</div>';
+
+      tx += '<div class="login__field">';
+        tx += '<i class="login__icon fas fa-user"></i>';
+        tx += '<input id="outrasInfos" type="text" class="login__input" placeholder="Outras Informações" name="info">';
+      tx += '</div>';
+
+      tx += '<button onclick="map.insert()" class="button login__submit ">';
+        tx += '<span class="button__text">Cadastrar</span>';
+        tx += '<i class="button__icon fas fa-chevron-right"></i>';
+      tx += '</button>';
+      tx += '</form>';
+    tx += '</div>';
+    $('#atualizar').html(tx);
+      */
+    var nomePessoa = document.getElementById("nomePessoa").value.trim(oldNomePessoa);
+    var tempoRua = document.getElementById("tempoRua").value.trim(oldTempoRua);
+    var localização = document.getElementById("localização").value.trim(oldLocalização);
+    var outrasInfos = document.getElementById("outrasInfos").value.trim(oldOutrasInfos);
+    //var nomePessoa = prompt('Digite o novo nome:', oldTitle);
+    if (nomePessoa && tempoRua && localização && outrasInfos) {
+            $.ajax({
+                type: 'POST',
+                url: api + '/userupdate',
+                data: {nomePessoa: nomePessoa, tempoRua: tempoRua, localização: localização, outrasInfos: outrasInfos, IDcadastro: IDcadastro},
+            }).done(function () {
+                users.list();
+            }).fail(function (msg) {
+                //console.log('FAIL');
+            }).always(function (msg) {
+                //console.log('ALWAYS');
+            });
+        
+    }
+},
+}

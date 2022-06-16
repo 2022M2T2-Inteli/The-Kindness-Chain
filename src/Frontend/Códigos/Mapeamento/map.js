@@ -27,6 +27,19 @@ var map = {
     },
 
     update(IDcadastro, oldNomePessoa, oldTempoRua, oldLocalização, oldOutrasInfos) {
+        
+        /*
+        var tx = '';
+        tx += '<div class="CAD" style="height:600px; margin-top: 20px;"> Mapeamento';
+            tx += '<form class="login" style="padding:0px;">';
+                tx += '<div class="title">' + element.title + '</div>';
+                tx += '<div class="actions">';
+                    tx += '<div class="action" onclick="user.update(' + element.userId + ',\'' + element.title + '\')">Editar</div>';
+                    tx += '<div class="action" onclick="user.delete(' + element.userId + ')">Excluir</div>';
+            tx += '</form>';
+        tx += '</div>';
+        $('#main').html(tx);
+        */
 
         var nomePessoa = document.getElementById("nomePessoa").value(oldNomePessoa).trim();
         var tempoRua = document.getElementById("tempoRua").value(oldTempoRua).trim();
