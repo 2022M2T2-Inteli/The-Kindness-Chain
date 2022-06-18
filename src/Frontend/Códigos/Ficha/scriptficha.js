@@ -2,7 +2,7 @@ api = "http://localhost:1324/";
 
 var user = {
   insert() {
-    var roupas = prompt("");
+    var roupas = document.getElementById("roupas");
     var alimentos = document.getElementById("alimentos");
     var higiene = document.getElementById("higiene");
     var atividades = document.getElementById("atividades");
