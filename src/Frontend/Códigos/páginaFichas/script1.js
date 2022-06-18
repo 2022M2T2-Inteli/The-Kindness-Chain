@@ -1,65 +1,4 @@
-$(document).ready(() => {
-  users.list();
-});
 
-var users = {
-    
-  list() {
-      $.ajax({
-          url: api + '/users',
-          type: 'GET',
-          success: data => {
-              var tx = '';
-              tx += `<div id="tabela">
-              <div class="container">
-                <div class="input-group">
-                  <input class="form-control" id="input" type="text" placeholder="Nome do assistido" name="produto"/>
-                  <div class="input-group-append">
-                    <button style="background-color: #1f1d20;" class="btn btn-primary" id="buscar">Buscar</button>
-                  </div>
-                  <a href="../Mapeamento/mapeamento.html"><button id="mapeamento">Adicionar</button></a>
-                </div>
-                <div>
-                </div>
-              </div>
-              <section>
-                <div class="container">
-                  <div id="cabecalho">Mostrando <span id="p_listados">0</span> de <span id="p_total">0</span></div>
-                  <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">tempo de rua</th>
-                        <th scope="col">localização</th>
-                        <th scope="col">outras informações</th>
-                        <th scope="col">Cadastro</th>
-                        <th scope="col">Alterar</th>
-                        <th scope="col">Deletar</th>
-                      </tr>
-            
-            
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </div>  
-              </section>
-            </div>`;
-              data.forEach(element => {
-                  
-              });
-              $('#main').html(tx);
-          }
-      });
-      
-  }
-  
-};
-
-//LISTA ANTIGA
-
-/*
 var pessoas=[];//Vetor para armazenar os produtos
 function addPessoa(id,nome,tempoRua,localizacao, outrasInfo){//Metodo para adicionar os produtos no array
   console.log("oi")
@@ -131,7 +70,12 @@ function buscar(){//Função responsavel de buscar os produtos
 
 
 buscar();//Inicializa mostrando todos os itens existentes
-*/
+
+
+
+
+
+
 
 var maps = {
   list() {
@@ -139,10 +83,37 @@ var maps = {
           url: api + '/users',
           type: 'GET',
           success: data => {
-            window.location.href = "mapUpdate.html";
-            prompt("ola, tudo bem \n", "ola")
-            console.log("HELLOW WORLD");
-            document.querySelector('#info1').innerHTML += "ola";
+            var myWindow =window.open("mapUpdate.html", "_self");
+
+            myWindow.document.write(`<div class="CAD" style="height:600px; margin-top: 20px;"> Atualizar
+            <form class="login" style="padding:0px;">
+        
+                <div class="login__field">
+                    <i id = "info1" class="login__icon fas fa-user"></i>
+                    <!--<input id="nomePessoa" type="text" class="login__input" placeholder='ola' value="ola" name="nome">-->
+                </div>
+        
+                <div class="login__field">
+                  <i  id = "info2" class="login__icon fas fa-user"></i>
+                  <!--<input id="tempoRua" type="text" class="login__input" placeholder="Tempo de Rua" name="tempo">-->
+                </div>
+        
+                <div class="login__field">
+                    <i id="info3" class="login__icon fas fa-user"></i>
+                    <!--<input id="localização" type="text" class="login__input" placeholder="Localização" name="local">-->
+                </div>
+        
+                <div class="login__field">
+                    <i id="info4" class="login__icon fas fa-user"></i>
+                    <!--<input id="outrasInfos" type="text" class="login__input" placeholder="Outras Informações" name="info">-->
+                </div>
+        
+                <button onclick="map.insert()" class="button login__submit ">
+                    <span class="button__text">Cadastrar</span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button>	
+            </form>    
+          </div>`);
             //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
             //document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldLocalizacao +'name="tempo">';
             //document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
@@ -153,6 +124,8 @@ var maps = {
   }
   
 };
+
+
 /*
 var maps = {
   list(userId, oldNome, oldTempoRua, oldLocalizacao, oldOutrasInfos) {
