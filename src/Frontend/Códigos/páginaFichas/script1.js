@@ -79,41 +79,12 @@ buscar();//Inicializa mostrando todos os itens existentes
 
 var maps = {
   list() {
+      //window.location.assign("mapUpdate.html"),
       $.ajax({
-          url: api + '/users',
+          //url: api +'/users',
           type: 'GET',
           success: data => {
-            var myWindow =window.open("mapUpdate.html", "_self");
-
-            myWindow.document.write(`<div class="CAD" style="height:600px; margin-top: 20px;"> Atualizar
-            <form class="login" style="padding:0px;">
-        
-                <div class="login__field">
-                    <i id = "info1" class="login__icon fas fa-user"></i>
-                    <!--<input id="nomePessoa" type="text" class="login__input" placeholder='ola' value="ola" name="nome">-->
-                </div>
-        
-                <div class="login__field">
-                  <i  id = "info2" class="login__icon fas fa-user"></i>
-                  <!--<input id="tempoRua" type="text" class="login__input" placeholder="Tempo de Rua" name="tempo">-->
-                </div>
-        
-                <div class="login__field">
-                    <i id="info3" class="login__icon fas fa-user"></i>
-                    <!--<input id="localização" type="text" class="login__input" placeholder="Localização" name="local">-->
-                </div>
-        
-                <div class="login__field">
-                    <i id="info4" class="login__icon fas fa-user"></i>
-                    <!--<input id="outrasInfos" type="text" class="login__input" placeholder="Outras Informações" name="info">-->
-                </div>
-        
-                <button onclick="map.insert()" class="button login__submit ">
-                    <span class="button__text">Cadastrar</span>
-                    <i class="button__icon fas fa-chevron-right"></i>
-                </button>	
-            </form>    
-          </div>`);
+            console.log("Ola")
             //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
             //document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldLocalizacao +'name="tempo">';
             //document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
@@ -124,6 +95,27 @@ var maps = {
   }
   
 };
+/*
+var maps = {
+  list() {
+    console.log("Ola")
+      window.location.assign("mapUpdate.html");
+      $.ajax({
+          //url: api + '/users',
+          type: 'GET',
+          success: data => {
+            mapear.list()
+            console.log("Ola")
+            //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
+            //document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldLocalizacao +'name="tempo">';
+            //document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
+            //document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= '+ oldOutrasInfos +' value = '+ oldOutrasInfos +' name="info">';
+          }
+      });
+      
+  }
+  
+};*/
 
 
 /*

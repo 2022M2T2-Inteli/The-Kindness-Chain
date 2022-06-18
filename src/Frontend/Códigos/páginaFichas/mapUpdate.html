@@ -61,11 +61,37 @@
     <a href="../Voluntarios/lista.html" class="w3-bar-item w3-button" style="width:20% !important">VOLUNTÁRIOS</a>
   </div>
 </div>
+<div class="CAD" style="height:600px; margin-top: 20px;"> Atualizar
+  <form class="login" style="padding:0px;">
 
+      <div class="login__field">
+          <i id = "info1" class="login__icon fas fa-user"></i>
+          <!--<input id="nomePessoa" type="text" class="login__input" placeholder='ola' value="ola" name="nome">-->
+      </div>
 
+      <div class="login__field">
+        <i  id = "info2" class="login__icon fas fa-user"></i>
+        <!--<input id="tempoRua" type="text" class="login__input" placeholder="Tempo de Rua" name="tempo">-->
+      </div>
 
+      <div class="login__field">
+          <i id="info3" class="login__icon fas fa-user"></i>
+          <!--<input id="localização" type="text" class="login__input" placeholder="Localização" name="local">-->
+      </div>
+
+      <div class="login__field">
+          <i id="info4" class="login__icon fas fa-user"></i>
+          <!--<input id="outrasInfos" type="text" class="login__input" placeholder="Outras Informações" name="info">-->
+      </div>
+
+      <button onclick="map.insert()" class="button login__submit ">
+          <span class="button__text">Cadastrar</span>
+          <i class="button__icon fas fa-chevron-right"></i>
+      </button>	
+  </form>    
+</div>
 </body>
-<script src="script1.js"></script>
+<script src="update.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
