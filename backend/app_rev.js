@@ -7,7 +7,7 @@ const sqlite3 = require("sqlite3").verbose();
 const DBPATH = "dbRev.db";
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-app.use(express.static("../src/Frontend/"));
+app.use(express.static("../src/Frontend/Códigos"));
 
 /* Definição dos endpoints */
 /****** CRUD ******************************************************************/
@@ -584,9 +584,9 @@ app.post("/delficha", urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
 });
 
-app.listen(process.env.PORT,() => {
-  console.log(`Server running`);
-});
-// app.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
+// app.listen(process.env.PORT,() => {
+//   console.log(`Server running`);
 // });
+ app.listen(port, hostname, () => {
+   console.log(`Server running at http://${hostname}:${port}/`);
+ });

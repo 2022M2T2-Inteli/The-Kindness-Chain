@@ -41,7 +41,7 @@ var users = {
                 console.log(element.senha)
                 
                 if(email === element.email && senha === element.senha){
-                  window.location = "páginaFichas/index.html";
+                  window.location = "páginaFichas/lista.html";
                   //console.log(email + "" + senha)
                   done = true;
                 }         
