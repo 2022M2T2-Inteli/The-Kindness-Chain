@@ -31,14 +31,13 @@ var cad = {
 
 
 var pessoas=[];//Vetor para armazenar os produtos
-function addPessoa(id,nome){//Metodo para adicionar os produtos no array
+function addPessoa(id,nome,toalha){//Metodo para adicionar os produtos no array
   console.log("oi")
-  pessoas[pessoas.length] = {id:id,nome:nome};
+  pessoas[pessoas.length] = {id:id,nome:nome,toalha:toalha};
   console.log(pessoas);
 }
 
 //Exemplo adicionando os produtos
-const api = "http://localhost:1324"
 $.ajax({
   url: api + '/usersassist',
   crossDomain: true,
@@ -46,7 +45,7 @@ $.ajax({
   type: 'GET',
   success: data => {
     data.forEach(element => {
-      addPessoa(element.IDcadastro, element.nomeSocial);
+      addPessoa(element.IDcadastro, element.nomeSocial, element.toalha);
     });
   }
 });
