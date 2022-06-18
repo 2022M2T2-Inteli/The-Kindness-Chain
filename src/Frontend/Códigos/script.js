@@ -24,7 +24,7 @@ var users = {
                 console.log(element.senha);
                 
                 if(email === element.email && senha === element.senha){
-                  window.location.href = "Voluntarios/lista.html";
+                  window.location.href = "páginaFichas/lista.html";
                   //console.log(email + "" + senha)
                   done = true;
                 }
