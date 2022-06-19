@@ -63,19 +63,15 @@ var vol = {
   insert() {
       var atividade = document.getElementById("ativVol").value.trim();
       var nome = document.getElementById("nome").value.trim();
-      var contato = document.getElementById("contato").value.trim();
-      var disponibilidade = document.getElementById("disp").value.trim();
+      var contato = Number(document.getElementById("contato").value.trim());
+      var disponibilidade = Number(document.getElementById("disp").value.trim());
       if (atividade && nome && contato && disponibilidade) {
               $.ajax({
                   url: api + '/volinsert',
                   type: 'POST',
                   data: {atividade: atividade, nome: nome, contato: contato, disponibilidade: disponibilidade},
               }).done(function () {
-                  console.log(atividade);
-                  console.log(nome);
-                  console.log(contato);
-                  console.log(disponibilidade);
-
+                  alert("Os dados foram enviados");
               }).fail(function (msg) {
                   //console.log('FAIL');
               }).always(function (msg) {
