@@ -60,9 +60,9 @@ function buscar(){//Função responsavel de buscar os produtos
  function listarPessoas(i){//Lista o produto do indece do array produto informado
     if(i!=null){
       //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><a href='mapUpdate.html' onclick='maps.list(" + pessoas[i].id + "," + pessoas[i].nome + "," + pessoas[i].tempoRua + "," + pessoas[i].localizacao + "," + pessoas[i].outrasInfo + ")'><button class='alterar'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
-      //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='maps.list(" + pessoas[i].id + ",\"" + pessoas[i].nome + ",\"" + pessoas[i].tempoRua + ",\"" + pessoas[i].localizacao + ",\"" + pessoas[i].outrasInfo + ")'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
+      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='list(" + pessoas[i].id + ",\"" + pessoas[i].nome + ",\"" + pessoas[i].tempoRua + ",\"" + pessoas[i].localizacao + ",\"" + pessoas[i].outrasInfo + ")'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
       
-      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='maps.list()'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
+      //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='pageUpdate()'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
 
       //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><a href='../mapUpdate.html'><button class='alterar' onclick='maps.list(" + pessoas[i].id + ")'><i class='fa-solid fa-pen-to-square'></i></button></a></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
     }
@@ -70,25 +70,43 @@ function buscar(){//Função responsavel de buscar os produtos
 
 
 buscar();//Inicializa mostrando todos os itens existentes
+/*
+function pageUpdate(){
+  location.replace("mapUpdate.html");
+}
+*/
 
 
+function list(id, oldNome, oldTempoRua, oldLocalizacao, oldOutrasInfos){
+  location.replace("mapUpdate.html");
+
+  console.log(id)
+  document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
+  document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldTempoRua +'name="tempo">';
+  document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
+  document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= '+ oldOutrasInfos +' value = '+ oldOutrasInfos +' name="info">';
+}
 
 
-
+function pageUpdate(){
+  location.replace("mapUpdate.html");
+  var a = "mapUpdate.html";
+  window.document.onload = valor();
+}
 
 
 var maps = {
-  list() {
-      //window.location.assign("mapUpdate.html"),
+  list(id, oldNome, oldTempoRua, oldLocalizacao, oldOutrasInfos) {
+      location.replace("mapUpdate.html"),
       $.ajax({
-          //url: api +'/users',
+          url: api +'/users',
           type: 'GET',
           success: data => {
-            console.log("Ola")
-            //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
-            //document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldLocalizacao +'name="tempo">';
-            //document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
-            //document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= '+ oldOutrasInfos +' value = '+ oldOutrasInfos +' name="info">';
+            console.log(id)
+            document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
+            document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldTempoRua +'name="tempo">';
+            document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
+            document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= '+ oldOutrasInfos +' value = '+ oldOutrasInfos +' name="info">';
           }
       });
       
