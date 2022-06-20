@@ -532,7 +532,7 @@ app.post("/inficha", urlencodedParser, (req, res) => {
   });
   db.close(); // Fecha o banco
   res.end();
-  location.replace("/páginaFichas/lista.html");
+  // location.replace("/páginaFichas/lista.html");
 });
 
 // Atualiza um registro no atendidoinicial (é o U do CRUD - Update)

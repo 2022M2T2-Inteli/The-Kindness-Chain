@@ -1,52 +1,21 @@
 api = 'http://localhost:1324';
 
-var cad = {
-
-    insert() {
-        var nomePessoa = document.getElementById("nomePessoa").value.trim();
-        var cpf_rg = document.getElementById("cpfrg").value.trim();
-        var servSoc  = document.getElementById("servsoc").value.trim();
-        var servPass = document.getElementById("servpass").value.trim();
-        var dataIn = document.getElementById("data_in").value.trim();
-        var enc = document.getElementById("encaminhamento").value.trim();
-        var motivos = document.getElementById("motivos").value.trim();
-        var toalha = document.getElementById("toalha").value.trim();
-        if (nomePessoa && cpf_rg && servSoc && servPass && dataIn && enc && motivos && toalha) {
-                $.ajax({
-                    url: api + '/assistinsert',
-                    type: 'POST',
-                    data: {nomeSocial: nomePessoa, CPF_RG: cpf_rg, serviçosSociais: servSoc, serviçosSociaisPassados: servPass, dataChegada: dataIn, encaminhamento: enc, motivosRua: motivos, toalha: toalha},
-                }).done(function () {
-                    alert("dados enviados com sucesso");
-
-                }).fail(function (msg) {
-                    //console.log('FAIL');
-                }).always(function (msg) {
-                    //console.log('ALWAYS');
-                });
-            
-        }
-    },
-
-}
-
-
 var pessoas=[];//Vetor para armazenar os produtos
-function addPessoa(id,nome,toalha){//Metodo para adicionar os produtos no array
+function addPessoa(id,roupas,alimentos, higiene, atividades, educador){//Metodo para adicionar os produtos no array
   console.log("oi")
-  pessoas[pessoas.length] = {id:id,nome:nome,toalha:toalha};
+  pessoas[pessoas.length] = {id:id,roupas:roupas, alimentos:alimentos, higiene:higiene, atividades:atividades, educador:educador};
   console.log(pessoas);
 }
 
 //Exemplo adicionando os produtos
 $.ajax({
-  url: api + '/usersassist',
+  url: api + '/getficha',
   crossDomain: true,
   headers: {'Access-Control-Allow-Origin': '*' },
   type: 'GET',
   success: data => {
     data.forEach(element => {
-      addPessoa(element.IDregistro, element.nomeSocial, element.toalha);
+      addPessoa(element.IDfichas, element.roupas, element.alimentos, element.higiene, element.atividades, element.educador);
     });
   }
 });
@@ -68,7 +37,7 @@ function buscar(){//Função responsavel de buscar os produtos
   var txtbusca=$("#input").val().toLowerCase();//Captura texto digitado e converte para minusculo
   //Percorre a lista de produtos e imprime ocorrencias verdadeiras
   for(var i=0;i<pessoas.length;i++){
-    var nome=pessoas[i].nome.toLowerCase();
+    var nome=pessoas[i].roupas.toLowerCase();
     var cod=pessoas[i].id;
     if(nome.match(txtbusca)){//Busca por nome
       listarPessoas(i);
@@ -87,7 +56,7 @@ function buscar(){//Função responsavel de buscar os produtos
       //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='maps.list(" + pessoas[i].id + ",\"" + pessoas[i].nome + ",\"" + pessoas[i].tempoRua + ",\"" + pessoas[i].localizacao + ",\"" + pessoas[i].outrasInfo + ")'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
       //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='maps.list()'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
 
-      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].toalha+"</td><td><a href = '../Ficha/lista.html'><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></a></td><td><a href = 'fichasRetorno.html'><button class='cadastrar'><i class='fa-solid fa-address-card'></i></button><a/></td></tr>");
+      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].roupas+"</td><td>"+pessoas[i].alimentos+"</td><td>"+pessoas[i].higiene+"</td><td>"+pessoas[i].atividades+"</td><td>"+pessoas[i].educador+"</td></tr>"); //<td><a href = '../Ficha/lista.html'><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></a></td><td><button class='cadastrar'><i class='fa-solid fa-address-card'></i></button></td></tr>");
     }
   }
 
