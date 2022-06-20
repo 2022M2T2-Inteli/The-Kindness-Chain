@@ -486,6 +486,60 @@
     background-image: url(../Assets/imagens/imagens_voluntarios/ods.png);
 }
 
+@media screen and (min-width:1400px){
+
+    .impacto button{
+     
+        height: 655px;
+       /* height: 625px; */
+    
+    }
+    
+    .ods button{
+     
+        height: 655px;
+      /*  height: 625px; */
+        
+    }
+    
+}
+@media screen and (min-width:800px) and (max-width:1200px){
+
+    .impacto button{
+     
+        height: 480px;
+      /*  height: 420px;*/
+    
+    }
+    
+    .ods button{
+     
+        height: 480px;
+      /*  height: 420px; */
+        
+    }
+    
+}
+
+@media screen and (max-width:799px){
+
+    .impacto button{
+     
+        height: 80%;
+        
+       /* height: 290px; */
+    
+    }
+    
+    .ods button{
+     
+        height: 320px;
+        
+      /*  height: 290px;  */
+        
+    }
+    
+}
 
 
 

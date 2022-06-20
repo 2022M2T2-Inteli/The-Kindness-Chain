@@ -218,7 +218,7 @@ app.post("/assistinsert", urlencodedParser, (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   sql =
-    "INSERT INTO cadastramento (CPF_RG, nomeSocial, serviçosSociais, dataChegada, motivosRua, serviçosSociaisPassados, encaminhamento, IDcadastro) VALUES ('" +
+    "INSERT INTO cadastramento (CPF_RG, nomeSocial, serviçosSociais, dataChegada, motivosRua, serviçosSociaisPassados, encaminhamento) VALUES ('" +
     req.body.CPF_RG +
     "', '" +
     req.body.nomeSocial +
@@ -232,8 +232,6 @@ app.post("/assistinsert", urlencodedParser, (req, res) => {
     req.body.serviçosSociaisPassados +
     "', '" +
     req.body.encaminhamento +
-    "', '" +
-    req.body.IDcadastro +
     "')";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
