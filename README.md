@@ -4,22 +4,22 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do projeto
+# Projeto web app Revirar
 
-## Nome do grupo
+## The Kindness Chain - grupo 3
 
 ## Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
+- <a href="https://www.linkedin.com/in/jeanrothstein/">Jean Lucas Rothstein Machado</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Lucas de Britto Vieira</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Felipe Henrique Moreira Leão</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Lucas Conti Pereira</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
 
 ## 📝 Descrição
 
-Curta descrição sobre o que o seu projeto faz (problema a ser resolvido e solução proposta).
+
 
 ## 📁 Estrutura de pastas
 
