@@ -505,18 +505,37 @@ app.get("/getficha", (req, res) => {
 app.post("/inficha", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
-
+  var roupas = "N"
+  var alimentos = "N"
+  var higiene = "N"
+  var atividades = "N"
+  var educador = "N"
+  if (req.body.roupas == "S"){
+    roupas = "S";
+  };
+  if (req.body.alimentos == "S"){
+    alimentos = "S";
+  };
+  if (req.body.higiene == "S"){
+    higiene = "S";
+  };
+  if (req.body.atividades == "S"){
+    atividades = "S";
+  };
+  if (req.body.educador == "S"){
+    educador = "S";
+  };
   sql =
     "INSERT INTO fichas (roupas, alimentos, higiene, atividades, educador, datahorário, IDcadastro, IDeducador) VALUES ('" +
-    req.body.roupas +
+    roupas +
     "', '" +
-    req.body.alimentos +
+    alimentos +
     "', '" +
-    req.body.higiene +
+    higiene +
     "','" +
-    req.body.atividades +
+    atividades +
     "','" +
-    req.body.educador +
+    educador +
     "','" +
     req.body.datahorário +
     "','" +
