@@ -4,22 +4,22 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do projeto
+# Projeto web app Revirar
 
-## Nome do grupo
+## The Kindness Chain - grupo 3
 
 ## Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
+- <a href="https://www.linkedin.com/in/jeanrothstein/">Jean Lucas Rothstein Machado</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Lucas de Britto Vieira</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Felipe Henrique Moreira Leão</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Lucas Conti Pereira</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
 
 ## 📝 Descrição
 
-Curta descrição sobre o que o seu projeto faz (problema a ser resolvido e solução proposta).
+O projeto desenvolvido nesse módulo propôs a criação de uma aplicação web em parceria com a instituição Revirar da ONG Irmã Amélia.O objetivo da web application para o Revirar é aumentar a visibilidade do projeto, junto ao alcance da ONG Irmã Amélia para a arrecadação de voluntários e recursos. Além disso, o projeto em desenvolvimento visa facilitar o contato com doadores e voluntários com a instituição e promover mais informações sobre o Revirar.
 
 ## 📁 Estrutura de pastas
 
