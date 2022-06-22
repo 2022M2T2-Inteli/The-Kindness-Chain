@@ -19,7 +19,7 @@
 
 ## 📝 Descrição
 
-
+O projeto desenvolvido nesse módulo propôs a criação de uma aplicação web em parceria com a instituição Revirar da ONG Irmã Amélia.O objetivo da web application para o Revirar é aumentar a visibilidade do projeto, junto ao alcance da ONG Irmã Amélia para a arrecadação de voluntários e recursos. Além disso, o projeto em desenvolvimento visa facilitar o contato com doadores e voluntários com a instituição e promover mais informações sobre o Revirar.
 
 ## 📁 Estrutura de pastas
 
