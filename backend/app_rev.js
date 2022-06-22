@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 const hostname = "localhost";
-const port = 1324;
+const port = 1234;
 const sqlite3 = require("sqlite3").verbose();
 const DBPATH = "dbRev.db";
 const bodyParser = require("body-parser");
