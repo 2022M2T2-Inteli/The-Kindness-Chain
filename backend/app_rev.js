@@ -645,24 +645,24 @@ app.post("/voldelete", urlencodedParser, (req, res) => {
 
 //Enspoint relatorios a partir da tabela atendimentos-----------------------------//
 //Post------------------------------------------//
-server.post('/getficha', (req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  var data1 = req.body.data1
-  console.log(data1)
-  var data2 = req.body.data2
-  console.log(data2)
-  var db = new sqlite3.Database(DBPATH); // Abre o banco
-  var sql = `SELECT SUM(qt_banho) qt_banho, SUM(nr_lanches) nr_lanches, SUM(qt_bazar) qt_bazar, COUNT(id_atendido) id_atendido FROM atendimentos WHERE dt_atendimento BETWEEN "${data1}" AND "${data2}"`;
-  //usado as datas requeridas para consulta no banco de dados
-  db.all(sql, [],  (err, rows ) => {
-      if (err) {
-          throw err;
-      }
-      res.json(rows);
-  });
-  db.close(); // Fecha o banco
-});
+// server.post('/getficha', (req, res) => {
+//  res.statusCode = 200;
+//  res.setHeader('Access-Control-Allow-Origin', '*');
+//   var data1 = req.body.data1
+//   console.log(data1)
+//   var data2 = req.body.data2
+//   console.log(data2)
+//   var db = new sqlite3.Database(DBPATH); // Abre o banco
+//   var sql = `SELECT SUM(qt_banho) qt_banho, SUM(nr_lanches) nr_lanches, SUM(qt_bazar) qt_bazar, COUNT(id_atendido) id_atendido FROM atendimentos WHERE dt_atendimento BETWEEN "${data1}" AND "${data2}"`;
+//   //usado as datas requeridas para consulta no banco de dados
+//   db.all(sql, [],  (err, rows ) => {
+//       if (err) {
+//           throw err;
+//       }
+//       res.json(rows);
+//   });
+//   db.close(); // Fecha o banco
+// });
 
 
 
