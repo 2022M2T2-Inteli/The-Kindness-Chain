@@ -24,7 +24,7 @@ var users = {
               console.log(element.senha);
 
               if (email === element.email && senha === element.senha) {
-                window.location.href = "páginaFichas/lista.html";
+                window.open("Perfil do Adm/perfil.html?"+element.nome),
                 //console.log(email + "" + senha)
                 done = true;
               }
@@ -42,7 +42,8 @@ var users = {
               console.log(element.senha);
 
               if (email === element.email && senha === element.senha) {
-                window.location = "páginaFichas/lista.html";
+                window.open("Perfil do Adm/perfil.html?"+element.nome), 
+                //window.location = "páginaFichas/lista.html";
                 //console.log(email + "" + senha)
                 done = true;
               }

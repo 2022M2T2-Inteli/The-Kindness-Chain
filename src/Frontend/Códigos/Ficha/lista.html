@@ -118,7 +118,7 @@
       </div>
     </div>
 
-    <div class="CAD" style="height: 550px; margin-top: 20px">
+    <div class="CAD" style="height: 600px; margin-top: 20px">
       <iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
       <form
         class="login"
@@ -130,9 +130,25 @@
 
 
         <h1 id="title">Ficha diária</h1>
+
+    <hr/>
         <div class="form-check">
-          <br />
-          <br />
+          <label class="form-check-label" for="atividades"> Data </label>
+          <br>
+          <input
+            class="form-check-input"
+            id="atividades"
+            type="date"
+            name="atividades"
+            style="width:150px; margin-left: 75px; "
+          />
+          <br>
+         
+        </div>
+        <hr/>
+        
+        <div class="form-check">
+          
           <input
             class="form-check-input"
             type="checkbox"
@@ -176,6 +192,10 @@
           <label class="form-check-label" for="atividades"> Atividades </label>
         </div>
         <hr />
+
+
+
+
         <div class="form-check">
           <input
             class="form-check-input"
@@ -184,13 +204,27 @@
             id="educador"
             name="educador"
           />
+
+        
           <label class="form-check-label" for="educador"> Educador </label>
         </div>
+<hr/>
+
+
+
+
+
+
+        
         <input
           type="submit"
           class="button login_submit salvar"
           onclick="ok()"
         />
+
+        
+
+
         <script>
           function ok() {
             alert("Os dados foram enviados");

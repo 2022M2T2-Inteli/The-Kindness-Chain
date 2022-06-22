@@ -3,18 +3,27 @@ var segundo = "#email";
 
 api = 'http://localhost:1234/';
 
+var queryString = decodeURI(location.search.substring().replace("?",""));
+console.log(queryString);
+/*
 function TestGETDB(){
     var url = api + "/assistente";
-    var resposta;
+    //var resposta;
 
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", url, false);
     xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
 
-    resposta = JSON.parse(xhttp.responseText);
+    //resposta = JSON.parse(xhttp.responseText);
 
    // $(getDBResDiv).append("<br /><br />" + JSON.stringify(resposta));
-    $(getDBResDiv).append(/*"<br /><br />" + */resposta[0].nome);
-    $(segundo).append(/*"<br /><br />" + */resposta[0].email);
+    $(getDBResDiv).append(/*"<br /><br />" + queryString[0]);
+    $(segundo).append(/*"<br /><br />" + queryString[0]);
     //console.log(xhttp.responseText);
 }
+*/
+
+window.onload = function() {
+    $(getDBResDiv).append("<h3>"+ queryString +"</h3>");
+    //$(segundo).append(queryString[0]);
+};
