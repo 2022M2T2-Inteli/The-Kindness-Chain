@@ -7,7 +7,7 @@ function addPessoa(id,nome,tempoRua,localizacao, outrasInfo){//Metodo para adici
 }
 
 //Exemplo adicionando os produtos
-const api = "http://localhost:1324"
+const api = "http://localhost:1234"
 $.ajax({
   url: api + '/users',
   crossDomain: true,

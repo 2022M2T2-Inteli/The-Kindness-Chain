@@ -1,10 +1,10 @@
 var getDBResDiv = "#nome";
 var segundo = "#email";
 
-api = 'http://localhost:1324/';
+api = 'http://localhost:1234/';
 
 function TestGETDB(){
-    var url = "http://127.0.0.1:1324/assistente";
+    var url = api + "/assistente";
     var resposta;
 
     var xhttp = new XMLHttpRequest();
