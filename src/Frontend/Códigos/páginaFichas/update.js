@@ -1,6 +1,8 @@
 const api = "http://localhost:1324"
 
-var queryString = location.search.substring().replace("?","").split("|");
+console.log(decodeURI(location.search.substring()));
+
+var queryString = decodeURI(location.search.substring().replace("?","")).split("|");
 console.log(queryString);
 window.onload = function() {
   upd.list(queryString[0], queryString[1], queryString[2], queryString[3], queryString[4])
@@ -8,11 +10,11 @@ window.onload = function() {
 
 var upd = {
     list(id,oldNome,oldTempoRua,oldLocalizacao,oldOutrasInfos) {
-        console.log(queryString);
-        document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= "Nome" value='+ oldNome +' name="nome">';
-        document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= "Tempo de Rua" value = '+ oldTempoRua +' name="tempo">';
-        document.querySelector('#info3').innerHTML += '<input id="localizacao" type="text" class="login__input" placeholder= "Localização" value = '+oldLocalizacao+' name="local">'; 
-        document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= "Outras Informações" value = '+ oldOutrasInfos +' name="info">';
+        console.log(oldTempoRua);//,oldNome,oldTempoRua,oldLocalizacao,oldOutrasInfos);
+        document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= "Nome" value=\"'+ oldNome +'\" name="nome">';
+        document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= "Tempo de Rua" value =\" '+ oldTempoRua +'\" name="tempo">';
+        document.querySelector('#info3').innerHTML += '<input id="localizacao" type="text" class="login__input" placeholder= "Localização" value =\" '+oldLocalizacao+'\" name="local">'; 
+        document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= "Outras Informações" value = \"'+ oldOutrasInfos +'\" name="info">';
         document.querySelector('#inf').innerHTML += '<button onclick="dadosNovos('+ id +')" class="button login__submit "><span class="button__text">Cadastrar</span></button>	';
         $.ajax({
             url: api + '/users',
