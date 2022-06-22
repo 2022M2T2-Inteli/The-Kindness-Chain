@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 const hostname = "localhost";
-const port = 1324;
+const port = 1234;
 const sqlite3 = require("sqlite3").verbose();
 const DBPATH = "dbRev.db";
 const bodyParser = require("body-parser");
@@ -58,16 +58,8 @@ app.post("/userupdate", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
-  sql =
-    "UPDATE mapeamento SET nomePessoa = '" +
-    req.body.nomePessoa +
-    "', tempoRua = '" +
-    req.body.tempoRua +
-    "', outrasInfos = '" +
-    req.body.outrasInfos +
-    "', localização = '" +
-    req.body.localização;
-  "' WHERE IDcadastro = '" + req.body.IDcadastro + "'";
+  sql = "UPDATE mapeamento SET nomePessoa = '" + req.body.nomePessoa + "', tempoRua = '" + req.body.tempoRua + "', outrasInfos = '" + req.body.outrasInfos + "', localização = '" + req.body.localização + "' WHERE IDcadastro = '" + req.body.IDcadastro + "'";
+
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
     if (err) {
@@ -140,11 +132,7 @@ app.post("/userupdateof", urlencodedParser, (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   sql =
-    "UPDATE atividades SET oficina  = '" +
-    req.body.oficina +
-    "' WHERE IDatv = '" +
-    req.body.IDatv +
-    "'";
+    "UPDATE atividades SET oficina  = '" + req.body.oficina + "' WHERE IDatv = '" + req.body.IDatv + "'";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
     if (err) {

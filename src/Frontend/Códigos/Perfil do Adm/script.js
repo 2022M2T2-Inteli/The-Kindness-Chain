@@ -1,7 +1,7 @@
 var getDBResDiv = "#nome";
 var segundo = "#email";
 
-api = 'http://localhost:1324/';
+api = 'http://localhost:1234/';
 
 function TestGETDB(){
     var url = api + "/assistente";

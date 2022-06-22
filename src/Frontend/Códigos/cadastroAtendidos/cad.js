@@ -1,4 +1,4 @@
-api = "http://localhost:1324";
+api = "http://localhost:1234";
 var cad = {
   insert() {
     var nomePessoa = document.getElementById("nomePessoa").value.trim();
