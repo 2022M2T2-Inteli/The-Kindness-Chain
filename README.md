@@ -93,7 +93,7 @@ deve possuir o valor "node app.js".
 
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 23/06/2022
+* 0.2.2 - 23/06/2022
     * Deploy no heroku
  * 0.2.1 - 20/06/2022
     * Finalização das integrações
