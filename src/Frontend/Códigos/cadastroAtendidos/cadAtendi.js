@@ -5,7 +5,7 @@ $(document).ready(() => {
 var tabCadAtendidos = {
   list() {
     $.ajax({
-      url: "http://localhost:1234/usersassist",
+      url: "/usersassist",
       type: "GET",
       success: (data) => {
         var tr = "";

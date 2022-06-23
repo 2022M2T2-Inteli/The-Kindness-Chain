@@ -1,4 +1,4 @@
-const api = "http://localhost:1324"
+
 
 console.log(decodeURI(location.search.substring()));
 
@@ -17,7 +17,7 @@ var upd = {
         document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= "Outras Informações" value = \"'+ oldOutrasInfos +'\" name="info">';
         document.querySelector('#inf').innerHTML += '<button onclick="dadosNovos('+ id +')" class="button login__submit "><span class="button__text">Cadastrar</span></button>	';
         $.ajax({
-            url: api + '/users',
+            url:  '/users',
             type: 'GET',
             success: data => {
               //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= "Nome" value='+ oldNome +' name="nome">';
@@ -47,7 +47,7 @@ var up = {
       if (id && nome && tempoRua && local && outrasInfo) {
               $.ajax({
                   type: 'POST',
-                  url: api + '/userupdate',
+                  url:  '/userupdate',
                   data: {nomePessoa: nome, tempoRua: tempoRua, outrasInfos: outrasInfo, localização: local, IDcadastro: id},
               }).done(function () {
                   window.location.assign("lista.html")

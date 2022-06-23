@@ -1,4 +1,4 @@
-api = 'http://localhost:1234';
+ 
 
 var pessoas=[];//Vetor para armazenar os produtos
 function addPessoa(id,roupas,alimentos, higiene, atividades, educador){//Metodo para adicionar os produtos no array
@@ -9,7 +9,7 @@ function addPessoa(id,roupas,alimentos, higiene, atividades, educador){//Metodo 
 
 //Exemplo adicionando os produtos
 $.ajax({
-  url: api + '/getficha',
+  url:  '/getficha',
   crossDomain: true,
   headers: {'Access-Control-Allow-Origin': '*' },
   type: 'GET',

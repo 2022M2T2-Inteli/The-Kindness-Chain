@@ -7,9 +7,9 @@ function addPessoa(id,nome,tempoRua,localizacao, outrasInfo){//Metodo para adici
 }
 
 //Exemplo adicionando os produtos
-const api = "http://localhost:1234"
+
 $.ajax({
-  url: api + '/users',
+  url:  '/users',
   crossDomain: true,
   headers: {'Access-Control-Allow-Origin': '*' },
   type: 'GET',
@@ -82,7 +82,7 @@ var maps = {
     console.log(id + oldNome + oldTempoRua +  oldLocalizacao + oldOutrasInfos)
       window.open("mapUpdate.html?"+id+"|"+oldNome+"|"+oldTempoRua+"|"+oldLocalizacao+"|"+oldOutrasInfos),
       $.ajax({
-          //url: api +'/users',
+          //url:  +'/users',
           type: 'GET',
           success: data => {
             console.log("Ola")
@@ -103,7 +103,7 @@ var maps = {
     console.log("Ola")
       window.location.assign("mapUpdate.html");
       $.ajax({
-          //url: api + '/users',
+          //url:  + '/users',
           type: 'GET',
           success: data => {
             mapear.list()
@@ -124,7 +124,7 @@ var maps = {
 var maps = {
   list(userId, oldNome, oldTempoRua, oldLocalizacao, oldOutrasInfos) {
       $.ajax({
-          url: api + '/users',
+          url:  + '/users',
           type: 'GET',
           success: data => {
             window.location.href = "mapUpdate.html";
@@ -154,7 +154,7 @@ var user = {
         if (nome.trim() != '') {
             $.ajax({
                 type: 'POST',
-                url: api + '/userupdate',
+                url:  '/userupdate',
                 data: {nomePessoa: nome, tempoRua: tempoRua, outrasInfos: outrasInfo, localização: localizacao, IDcadastro: userId},
             }).done(function () {
                 users.list();
@@ -177,7 +177,7 @@ var user = {
     if (nomePessoa && tempoRua && localização && outrasInfos) {
             $.ajax({
                 type: 'POST',
-                url: api + '/userupdate',
+                url:  + '/userupdate',
                 data: {nomePessoa: nomePessoa, tempoRua: tempoRua, localização: localização, outrasInfos: outrasInfos, IDcadastro: IDcadastro},
             }).done(function () {
                 users.list();
@@ -197,7 +197,7 @@ var user = {
       if (confirm('Confirma a exclusão?')) {
           $.ajax({
               type: 'POST',
-              url: api + '/userdelete',
+              url:  + '/userdelete',
               data: {IDcadastro: userId},
           }).done(function () {
               users.list();
@@ -215,7 +215,7 @@ var user = {
 var maps = {
   list(IDvoluntario) {
       $.ajax({
-          url: api + '/users',
+          url:  + '/users',
           type: 'GET',
           success: data => {
             console.log("OLA");

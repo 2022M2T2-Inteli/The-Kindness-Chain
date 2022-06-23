@@ -1,4 +1,4 @@
-api = "http://localhost:1234/";
+
 
 var user = {
   insert() {
@@ -11,7 +11,7 @@ var user = {
     // if (roupas.checked) {
     $.ajax({
       type: "POST",
-      url: api + "/inficha",
+      url:  "/inficha",
       data: {roupas: roupas, alimentos:alimentos, higiene:higiene, atividades:atividades, educador:educador},
       success: function () {
         console.log("fui");
