@@ -7,7 +7,7 @@ const sqlite3 = require("sqlite3").verbose();
 const DBPATH = "dbRev.db";
 const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
-app.use(express.static("../Frontend/Códigos/"));
+app.use(express.static("../src/Frontend/Códigos"));
 
 /* Definição dos endpoints */
 /****** CRUD ******************************************************************/
@@ -58,18 +58,7 @@ app.post("/userupdate", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
-  sql =
-    "UPDATE mapeamento SET nomePessoa = '" +
-    req.body.nomePessoa +
-    "', tempoRua = '" +
-    req.body.tempoRua +
-    "', outrasInfos = '" +
-    req.body.outrasInfos +
-    "', localização = '" +
-    req.body.localização +
-    "' WHERE IDcadastro = '" +
-    req.body.IDcadastro +
-    "'";
+  sql = "UPDATE mapeamento SET nomePessoa = '" + req.body.nomePessoa + "', tempoRua = '" + req.body.tempoRua + "', outrasInfos = '" + req.body.outrasInfos + "', localização = '" + req.body.localização + "' WHERE IDcadastro = '" + req.body.IDcadastro + "'";
 
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
@@ -143,11 +132,7 @@ app.post("/userupdateof", urlencodedParser, (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
   sql =
-    "UPDATE atividades SET oficina  = '" +
-    req.body.oficina +
-    "' WHERE IDatv = '" +
-    req.body.IDatv +
-    "'";
+    "UPDATE atividades SET oficina  = '" + req.body.oficina + "' WHERE IDatv = '" + req.body.IDatv + "'";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
     if (err) {
@@ -487,6 +472,9 @@ app.post("/educadordelete", urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
 });
 
+
+
+
 app.get("/getficha", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
@@ -506,26 +494,26 @@ app.get("/getficha", (req, res) => {
 app.post("/inficha", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
-  var roupas = "N";
-  var alimentos = "N";
-  var higiene = "N";
-  var atividades = "N";
-  var educador = "N";
-  if (req.body.roupas == "S") {
+  var roupas = "N"
+  var alimentos = "N"
+  var higiene = "N"
+  var atividades = "N"
+  var educador = "N"
+  if (req.body.roupas == "S"){
     roupas = "S";
-  }
-  if (req.body.alimentos == "S") {
+  };
+  if (req.body.alimentos == "S"){
     alimentos = "S";
-  }
-  if (req.body.higiene == "S") {
+  };
+  if (req.body.higiene == "S"){
     higiene = "S";
-  }
-  if (req.body.atividades == "S") {
+  };
+  if (req.body.atividades == "S"){
     atividades = "S";
-  }
-  if (req.body.educador == "S") {
+  };
+  if (req.body.educador == "S"){
     educador = "S";
-  }
+  };
   sql =
     "INSERT INTO fichas (roupas, alimentos, higiene, atividades, educador, datahorário, IDcadastro, IDeducador) VALUES ('" +
     roupas +
@@ -604,8 +592,10 @@ app.post("/delficha", urlencodedParser, (req, res) => {
   db.close(); // Fecha o banco
 });
 
-//Get voluntários
-app.get("/getvol", (req, res) => {
+
+
+ //Get voluntários
+ app.get("/getvol", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
@@ -620,20 +610,12 @@ app.get("/getvol", (req, res) => {
   db.close(); // Fecha o banco
 });
 
+
 app.post("/volinsert", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
-  sql =
-    "INSERT INTO voluntarios (atividade, nome, contato, disponibilidade) VALUES ('" +
-    req.body.atividade +
-    "', '" +
-    req.body.nome +
-    "', '" +
-    req.body.contato +
-    "', '" +
-    req.body.disponibilidade +
-    "')";
+  sql = "INSERT INTO voluntarios (atividade, nome, contato, disponibilidade) VALUES ('" + req.body.atividade + "', '" + req.body.nome + "', '" + req.body.contato + "', '" + req.body.disponibilidade + "')";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
     if (err) {
@@ -648,10 +630,7 @@ app.post("/voldelete", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
 
-  sql =
-    "DELETE FROM voluntarios WHERE IDvoluntario = '" +
-    req.body.IDvoluntario +
-    "'";
+  sql = "DELETE FROM voluntarios WHERE IDvoluntario = '" + req.body.IDvoluntario + "'";
   var db = new sqlite3.Database(DBPATH); // Abre o banco
   db.run(sql, [], (err) => {
     if (err) {
@@ -665,9 +644,25 @@ app.post("/voldelete", urlencodedParser, (req, res) => {
 
 
 
-
-
-
+//Post------------------------------------------//
+// server.post('/getficha', (req, res) => {
+//  res.statusCode = 200;
+//  res.setHeader('Access-Control-Allow-Origin', '*');
+//   var data1 = req.body.data1
+//   console.log(data1)
+//   var data2 = req.body.data2
+//   console.log(data2)
+//   var db = new sqlite3.Database(DBPATH); // Abre o banco
+//   var sql = `SELECT SUM(qt_banho) qt_banho, SUM(nr_lanches) nr_lanches, SUM(qt_bazar) qt_bazar, COUNT(id_atendido) id_atendido FROM atendimentos WHERE dt_atendimento BETWEEN "${data1}" AND "${data2}"`;
+//   //usado as datas requeridas para consulta no banco de dados
+//   db.all(sql, [],  (err, rows ) => {
+//       if (err) {
+//           throw err;
+//       }
+//       res.json(rows);
+//   });
+//   db.close(); // Fecha o banco
+// });
 
 
 
@@ -676,6 +671,6 @@ app.post("/voldelete", urlencodedParser, (req, res) => {
 // app.listen(process.env.PORT,() => {
 //   console.log(`Server running`);
 // });
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+ app.listen(port, hostname, () => {
+   console.log(`Server running at http://${hostname}:${port}/`);
+ });

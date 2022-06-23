@@ -42,7 +42,6 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script src=""></script>
   </head>
 
   <body style="text-align: center; font-family: 'Space Grotesk', sans-serif">
@@ -69,14 +68,14 @@
           <p class="txt">MAPEAMENTO</p>
         </a>
         <a
-          href="../cadastroAtendidos/tabAtendidos.html"
+          href="../páginaFichas/lista.html"
           class="w3-bar-item w3-button w3-padding-large w3-hover-black um"
         >
           <i class="fa-solid fa-address-book icon"></i>
           <p class="txt">ATENDIDOS</p>
         </a>
         <a
-          href=""
+          href="../Relatórios/index.html"
           class="w3-bar-item w3-button w3-padding-large w3-hover-black um"
         >
           <i class="fa-solid fa-id-badge icon"></i>
@@ -110,7 +109,7 @@
           >MAPEAMENTO</a
         >
         <a
-          href="../cadastroAtendidos/tabAtendidos.html"
+          href="../páginaFichas/lista.html"
           class="w3-bar-item w3-button"
           style="width: 20% !important"
           >ATENDIDOS</a
@@ -161,10 +160,10 @@
           <table class="table table-bordered">
             <thead>
               <tr>
-                <th scope="col">Mês</th>
+                <th scope="col">Data</th>
                 <th scope="col">Lanches</th>
-                <th scope="col">Higiene</th>
                 <th scope="col">Roupas</th>
+                <th scope="col">Higiene</th>
                 <th scope="col">Atividades</th>
                 <th scope="col">Trabalho voluntário</th>
               </tr>
@@ -181,23 +180,24 @@
     <script src="script.js"></script>
     <script>
       $(document).ready(() => {
-        tabVoluntarios.list();
+        index.list();
       });
 
-      var tabVoluntarios = {
+      var index = {
         list() {
           $.ajax({
-            url: "http://localhost:1324/getvol",
+            url: "http://localhost:1234/getficha",
             type: "GET",
             success: (data) => {
               var tr = "";
               data.forEach((element) => {
                 tr += `<tr>`;
-                tr += `<td> ${element.IDvoluntario}</td>`;
-                tr += `<td> ${element.atividade}</td>`;
-                tr += `<td> ${element.nome}</td>`;
-                tr += `<td> ${element.contato}</td>`;
-                tr += `<td> ${element.disponibilidade}</td></tr>`;
+                tr += `<td> ${element.datahorário}</td>`;
+                tr += `<td> ${element.alimentos}</td>`;
+                tr += `<td> ${element.roupas}</td>`;
+                tr += `<td> ${element.higiene}</td>`;
+                tr += `<td> ${element.atividades}</td>`;
+                tr += `<td> ${element.educador}</td></tr>`;
               });
               $("#table").html(tr);
             },
@@ -207,3 +207,4 @@
     </script>
   </body>
 </html>
+
