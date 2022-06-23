@@ -11,11 +11,11 @@
 ## Integrantes: 
 - <a href="https://www.linkedin.com/in/jeanrothstein/">Jean Lucas Rothstein Machado</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">Lucas de Britto Vieira</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Felipe Henrique Moreira Leão</a> 
+- <a href=https://www.linkedin.com/in/felipe-le%C3%A3o-9a8a601a6/>Felipe Henrique Moreira Leão</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Lucas Conti Pereira</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Alan Rozensztajn Schipper</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Michel Mansur</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Beny Frid</a>
 
 ## 📝 Descrição
 
@@ -23,17 +23,6 @@ O projeto desenvolvido nesse módulo propôs a criação de uma aplicação web 
 
 ## 📁 Estrutura de pastas
 
-```
-Alunos inteli (remover essa observação do readme.md após leitura e execução):
-
-Supondo que você é da Turma 4 e Projeto 5, substitua:
-
-T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf
-por
-T4_G5_V01_Web_application_document.pdf
-
-Faça o mesmo para a documentação em formato DOCX.
-```
 
 |--> documentos<br>
   &emsp;| --> outros <br>
@@ -77,41 +66,47 @@ npm start
 6. O servidor está online.
 
 
-```
-Alunos inteli (remover essa observação do readme.md após leitura e execução):
-
-1. Certifique-se que há um arquivo "package.json" na pasta backend do projeto.
-
-2. Dentro deste arquivo, encontre a propriedade "scripts", e adicione um atributo de nome "start"
-com o valor "node <CAMINHO_DO_ARQUIVO_DO_SERVIDOR>." Atenção: "<CAMINHO_DO_ARQUIVO_DO_SERVIDOR>" 
-deve ser substituído pelo caminho para o arquivo principal da aplicação, utilizado para subir o
-servidor. Por exemplo, se o arquivo utilizado para subir o servidor é "app.js", o atributo start
-deve possuir o valor "node app.js".
-
-3. No arquivo utilizado para subir a aplicação, defina a porta padrão de execução para "1234".
-````
-
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 25/01/2022
-    * Atualização de documentos (código do módulo permanece inalterado).
-* 0.2.0 - 15/01/2022
-    * Remove `setDefaultXYZ()`
-    * Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * Crash quando chama `baz()`
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.2.2 - 23/06/2022
+    * Deploy no heroku
+ * 0.2.1 - 20/06/2022
+    * Finalização das integrações
+* 0.2.0 - 17/06/2022
+    * Começo das integrações
+* 0.1.1 - 10/06/2022
+    * Finalização dos endpoints e banco de dados 
+* 0.1.0 - 30/05/2022
+    * Começo do backend criação dos end points e tabelas no banco de dados 
+ * 0.0.3 - 23/05/2022
+    * Finalização do frontend e começo de backend
+* 0.0.2 - 16/05/2022
+    * Melhora do frontend em decorrência das euristicas de Nielsen
+* 0.0.1 - 09/05/2022
+    * Criação dos frontend e implementação das paginas gerais
 
 ## 📋 Licença/License
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, Jean Lucas Rothstein Machado, Lucas de Britto Vieira, Felipe Henrique Moreira Leão, Lucas Conti Pereira, Nome do integrante 5, Nome do integrante 6, Nome do integrante 7</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, Jean Lucas Rothstein Machado, Lucas de Britto Vieira, Felipe Henrique Moreira Leão, Lucas Conti Pereira, Alan Rozensztajn Schipper, Michel Mansur, Beny Frid</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
 ## 🎓 Referências
 
 Aqui estão as referências usadas no projeto:
 
-1. <https://creativecommons.org/share-your-work/>
+- Figma;
+- Canva;
+- Google docs;
+- Vscode;
+- Html;
+- Css;
+- Js;
+- GoogleFonts;
+- Bootstrap;
+- Lucidchart;
+- OpenCode;
+- Miro;
+- Github;
+- Postman;
+- Drive (Google);
+- Instagram, Facebook;
+- Documentação API - https://documenter.getpostman.com/view/20645506/Uz5AseV6
