@@ -69,7 +69,7 @@
           <p class="txt">MAPEAMENTO</p>
         </a>
         <a
-          href="../cadastroAtendidos/tabAtendidos.html"
+          href="../páginaFichas/lista.html"
           class="w3-bar-item w3-button w3-padding-large w3-hover-black um"
         >
           <i class="fa-solid fa-address-book icon"></i>
@@ -187,7 +187,7 @@
       var tabVoluntarios = {
         list() {
           $.ajax({
-            url: "http://localhost:1324/getvol",
+            url: "http://localhost:1234/getvol",
             type: "GET",
             success: (data) => {
               var tr = "";
