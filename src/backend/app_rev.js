@@ -506,25 +506,26 @@ app.get("/getficha", (req, res) => {
 app.post("/inficha", urlencodedParser, (req, res) => {
   res.statusCode = 200;
   res.setHeader("Access-Control-Allow-Origin", "*"); // Isso é importante para evitar o erro de CORS
-  var roupas = "N";
-  var alimentos = "N";
-  var higiene = "N";
-  var atividades = "N";
-  var educador = "N";
-  if (req.body.roupas == "S") {
-    roupas = "S";
+  var roupas = "0";
+  var alimentos = "0";
+  var higiene = "0";
+  var atividades = "0";
+  var educador = "0";
+  var data = req.body.datahorário;
+  if (req.body.roupas == "1") {
+    roupas = "1";
   }
-  if (req.body.alimentos == "S") {
-    alimentos = "S";
+  if (req.body.alimentos == "1") {
+    alimentos = "1";
   }
-  if (req.body.higiene == "S") {
-    higiene = "S";
+  if (req.body.higiene == "1") {
+    higiene = "1";
   }
-  if (req.body.atividades == "S") {
-    atividades = "S";
+  if (req.body.atividades == "1") {
+    atividades = "1";
   }
-  if (req.body.educador == "S") {
-    educador = "S";
+  if (req.body.educador == "1") {
+    educador = "1";
   }
   sql =
     "INSERT INTO fichas (roupas, alimentos, higiene, atividades, educador, datahorário, IDcadastro, IDeducador) VALUES ('" +
@@ -538,7 +539,7 @@ app.post("/inficha", urlencodedParser, (req, res) => {
     "','" +
     educador +
     "','" +
-    req.body.datahorário +
+    data +
     "','" +
     req.body.IDcadastro +
     "','" +
@@ -663,15 +664,21 @@ app.post("/voldelete", urlencodedParser, (req, res) => {
 });
 
 
+app.post('/somafichas', (req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Access-Control-Allow-Origin', '*');
 
-
-
-
-
-
-
-
-
+  var db = new sqlite3.Database(DBPATH); // Abre o banco
+  var sql = `SELECT SUM(roupas) as roupas_soma, SUM(alimentos) as alimentos_soma, SUM(higiene) as higiene_soma, SUM(atividades) as atividades_soma, SUM(educador) as educador_soma FROM fichas`; // WHERE dt_atendimento BETWEEN "${data1}" AND "${data2}"`;
+  //usado as datas requeridas para consulta no banco de dados
+  db.all(sql, [],  (err, rows ) => {
+      if (err) {
+          throw err;
+      }
+      res.json(rows);
+  });
+  db.close(); // Fecha o banco
+});
 
 // app.listen(process.env.PORT,() => {
 //   console.log(`Server running`);

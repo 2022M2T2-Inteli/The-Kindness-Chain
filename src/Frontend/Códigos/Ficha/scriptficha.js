@@ -2,12 +2,14 @@ api = "http://localhost:1234/";
 
 var user = {
   insert() {
-    var dia = document.getElementById("data");
+    var dia = document.getElementById("data").value;
     var roupas = document.getElementById("roupas");
     var alimentos = document.getElementById("alimentos");
     var higiene = document.getElementById("higiene");
     var atividades = document.getElementById("atividades");
     var educador = document.getElementById("educador");
+
+    console.log(dia)
 
     // if (roupas.checked) {
     $.ajax({
