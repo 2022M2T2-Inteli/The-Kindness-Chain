@@ -188,6 +188,8 @@ var index = {
       url: api + "/somafichas",
       type: "POST",
       success: (data) => {
+
+        //a seguir são declaradas as variáveis 
         var tr = "";
         var higiene = data[0].higiene_soma;
         var banho = '<p>' + higiene + "</p>";
@@ -199,6 +201,9 @@ var index = {
         var atendimentos = '<p>' + ativ + "</p>";
         var vol = data[0].educador_soma;
         var voluntariado = '<p>' + vol + "</p>";
+        
+        // a seguir é adicionado na variável que será mostrada no site 
+        // cada variável que foi criada acima
         tr += `<tr>`;
         tr += `<td> Junho </td>`;
         tr += `<td> ${lanches}</td>`;
