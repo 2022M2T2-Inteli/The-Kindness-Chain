@@ -23,17 +23,6 @@ O projeto desenvolvido nesse módulo propôs a criação de uma aplicação web 
 
 ## 📁 Estrutura de pastas
 
-```
-Alunos inteli (remover essa observação do readme.md após leitura e execução):
-
-Supondo que você é da Turma 4 e Projeto 5, substitua:
-
-T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf
-por
-T4_G5_V01_Web_application_document.pdf
-
-Faça o mesmo para a documentação em formato DOCX.
-```
 
 |--> documentos<br>
   &emsp;| --> outros <br>
@@ -77,20 +66,6 @@ npm start
 6. O servidor está online.
 
 
-```
-Alunos inteli (remover essa observação do readme.md após leitura e execução):
-
-1. Certifique-se que há um arquivo "package.json" na pasta backend do projeto.
-
-2. Dentro deste arquivo, encontre a propriedade "scripts", e adicione um atributo de nome "start"
-com o valor "node <CAMINHO_DO_ARQUIVO_DO_SERVIDOR>." Atenção: "<CAMINHO_DO_ARQUIVO_DO_SERVIDOR>" 
-deve ser substituído pelo caminho para o arquivo principal da aplicação, utilizado para subir o
-servidor. Por exemplo, se o arquivo utilizado para subir o servidor é "app.js", o atributo start
-deve possuir o valor "node app.js".
-
-3. No arquivo utilizado para subir a aplicação, defina a porta padrão de execução para "1234".
-````
-
 ## 🗃 Histórico de lançamentos
 
 * 0.2.2 - 23/06/2022
@@ -118,4 +93,20 @@ deve possuir o valor "node app.js".
 
 Aqui estão as referências usadas no projeto:
 
-1. <https://creativecommons.org/share-your-work/>
+- Figma;
+- Canva;
+- Google docs;
+- Vscode;
+- Html;
+- Css;
+- Js;
+- GoogleFonts;
+- Bootstrap;
+- Lucidchart;
+- OpenCode;
+- Miro;
+- Github;
+- Postman;
+- Drive (Google);
+- Instagram, Facebook;
+- Documentação API - https://documenter.getpostman.com/view/20645506/Uz5AseV6
