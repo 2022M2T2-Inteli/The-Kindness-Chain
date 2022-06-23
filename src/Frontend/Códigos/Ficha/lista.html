@@ -118,48 +118,38 @@
       </div>
     </div>
 
-    <div class="CAD" style="height: 600px; margin-top: 20px">
+    <div class="CAD" style="height: 550px; margin-top: 20px">
       <iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
       <form
         class="login"
         style="padding: 0px"
         method="post"
-        action="http://localhost:1234/inficha"
+        action="http://localhost:1324/inficha"
         target="dummyframe"
       >
-
-
-        <h1 id="title">Ficha diária</h1>
-
-    <hr/>
-        <div class="form-check">
-          <label class="form-check-label" for="data"> Data </label>
-          <br>
-          <input
-            class="form-check-input"
-            id="data"
-            type="date" 
-            name="data"
-            style="width:150px; margin-left: 75px; "
+        <div>
+          <img
+            id="perfil"
+            src="reginaldosilva.png"
+            style="transform: scale(1.1)"
+            align="left"
           />
-          <br>
-         
         </div>
-        <hr/>
-        
+        <h2 id="data">25/04/2022</h2>
+        <h1 id="nome">Reginaldo Silva</h1>
         <div class="form-check">
+          <br />
+          <br />
           <input
             class="form-check-input"
             type="checkbox"
             value="S"
             id="roupas"
-            style="margin-left:-252px"
             name="roupas"
           />
-          <label class="form-check-label" for="roupas" style="margin-left:-225px"> Roupas </label>
+          <label class="form-check-label" for="roupas"> Roupas </label>
         </div>
         <hr />
-
         <div class="form-check">
           <input
             class="form-check-input"
@@ -168,7 +158,6 @@
             id="alimentos"
             name="alimentos"
           />
-
           <label class="form-check-label" for="alimentos"> Alimentos </label>
         </div>
         <hr />
@@ -194,10 +183,6 @@
           <label class="form-check-label" for="atividades"> Atividades </label>
         </div>
         <hr />
-
-
-
-
         <div class="form-check">
           <input
             class="form-check-input"
@@ -206,27 +191,13 @@
             id="educador"
             name="educador"
           />
-
-        
           <label class="form-check-label" for="educador"> Educador </label>
         </div>
-<hr/>
-
-
-
-
-
-
-        
         <input
           type="submit"
           class="button login_submit salvar"
           onclick="ok()"
         />
-
-        
-
-
         <script>
           function ok() {
             alert("Os dados foram enviados");

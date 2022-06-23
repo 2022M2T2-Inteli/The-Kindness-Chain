@@ -1,4 +1,4 @@
-api = "http://localhost:1234";
+api = "http://localhost:1324";
 
 /*
 $(document).ready(() => {
@@ -24,7 +24,7 @@ var users = {
               console.log(element.senha);
 
               if (email === element.email && senha === element.senha) {
-                window.open("Perfil do Adm/perfil.html?"+element.nome),
+                window.location.href = "páginaFichas/lista.html";
                 //console.log(email + "" + senha)
                 done = true;
               }
@@ -42,8 +42,7 @@ var users = {
               console.log(element.senha);
 
               if (email === element.email && senha === element.senha) {
-                window.open("Perfil do Adm/perfil.html?"+element.nome), 
-                //window.location = "páginaFichas/lista.html";
+                window.location = "páginaFichas/lista.html";
                 //console.log(email + "" + senha)
                 done = true;
               }
