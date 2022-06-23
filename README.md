@@ -118,20 +118,20 @@ deve possuir o valor "node app.js".
 
 Aqui estão as referências usadas no projeto:
 
--Figma
-- Canva
--Google docs
--Vscode
--Html
--Css
--Js
-- GoogleFonts
+- Figma;
+- Canva;
+- Google docs;
+- Vscode;
+- Html;
+- Css;
+- Js;
+- GoogleFonts;
 - Bootstrap;
--Lucidchart
--OpenCode
--Miro
--Github
--Postman
--Drive (Google)
--Instagram, Facebook;
--Documentação API - https://documenter.getpostman.com/view/20645506/Uz5AseV6
+- Lucidchart;
+- OpenCode;
+- Miro;
+- Github;
+- Postman;
+- Drive (Google);
+- Instagram, Facebook;
+- Documentação API - https://documenter.getpostman.com/view/20645506/Uz5AseV6
