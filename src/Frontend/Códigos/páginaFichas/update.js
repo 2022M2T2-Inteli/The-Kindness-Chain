@@ -10,7 +10,7 @@ window.onload = function() {
 
 var upd = {
     list(id,oldNome,oldTempoRua,oldLocalizacao,oldOutrasInfos) {
-        console.log(oldTempoRua);//,oldNome,oldTempoRua,oldLocalizacao,oldOutrasInfos);
+        console.log(oldTempoRua);
         document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= "Nome" value=\"'+ oldNome +'\" name="nome">';
         document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= "Tempo de Rua" value =\" '+ oldTempoRua +'\" name="tempo">';
         document.querySelector('#info3').innerHTML += '<input id="localizacao" type="text" class="login__input" placeholder= "Localização" value =\" '+oldLocalizacao+'\" name="local">'; 
@@ -20,10 +20,6 @@ var upd = {
             url: api + '/users',
             type: 'GET',
             success: data => {
-              //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= "Nome" value='+ oldNome +' name="nome">';
-              //document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= "Tempo de Rua" value = '+ oldTempoRua +'name="tempo">';
-              //document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= "Localização" value = '+oldLocalizacao+'name="local">'; 
-              //document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= "Outras Informações" value = '+ oldOutrasInfos +' name="info">';
             }
         });
         
@@ -53,9 +49,7 @@ var up = {
                   window.location.assign("lista.html")
                   users.list();
               }).fail(function (msg) {
-                  //console.log('FAIL');
               }).always(function (msg) {
-                  //console.log('ALWAYS');
               });
       }
   },

@@ -33,7 +33,6 @@ var map = {
         var localização = document.getElementById("localização").placeholder(oldLocalização).trim();
         var outrasInfos = document.getElementById("outrasInfos").placeholder(oldOutrasInfos).trim();
 
-        //if (nomePessoa && tempoRua && localização && outrasInfos) {
                 $.ajax({
                     type: 'POST',
                     url: api + '/userupdate',
@@ -42,9 +41,6 @@ var map = {
                     console.log(nomePessoa);
                     map.update();
                 }).fail(function (msg) {
-                    //console.log('FAIL');
                 }).always(function (msg) {
-                    //console.log('ALWAYS');
                 });
-        //}
     }};

@@ -8,7 +8,6 @@ var user = {
     var atividades = document.getElementById("atividades");
     var educador = document.getElementById("educador");
 
-    // if (roupas.checked) {
     $.ajax({
       type: "POST",
       url: api + "/inficha",
@@ -21,11 +20,8 @@ var user = {
         console.log(roupas);
       })
       .fail(function (msg) {
-        //console.log('FAIL');
       })
       .always(function (msg) {
-        //console.log('ALWAYS');
       });
-    // }
   },
 };

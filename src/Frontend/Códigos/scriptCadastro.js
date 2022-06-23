@@ -24,9 +24,7 @@ var user = {
                     console.log(email);
                     console.log(senha);
                 }).fail(function (msg) {
-                    //console.log('FAIL');
                 }).always(function (msg) {
-                    //console.log('ALWAYS');
                 });
             } 
             case "assistente":
@@ -40,9 +38,7 @@ var user = {
                     console.log(email);
                     console.log(senha);
                 }).fail(function (msg) {
-                    //console.log('FAIL');
                 }).always(function (msg) {
-                    //console.log('ALWAYS');
                 });
             
         }
