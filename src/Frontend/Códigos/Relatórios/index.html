@@ -178,26 +178,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
     <script>
-      $(document).ready(() => {
-        tabVoluntarios.list();
-      });
-
-      var tabVoluntarios = {
-        list() {
-          $.ajax({
-            url: "http://localhost:1324/getvol",
-            type: "GET",
-            success: (data) => {
-              var tr = "";
-              data.forEach((element) => {
-                tr += `<tr>`;
-                tr += `<td> ${element.IDvoluntario}</td>`;
-                tr += `<td> ${element.atividade}</td>`;
-                tr += `<td> ${element.nome}</td>`;
-                tr += `<td> ${element.contato}</td>`;
-                tr += `<td> ${element.disponibilidade}</td></tr>`;
-              });
-              $("#table").html(tr);
+     api = "http://localhost:1234";
+ $(document).ready(() => {
+       index.list();
+     });
+var index = {
+  list() {
+    $.ajax({
+      url: api + "/somafichas",
+      type: "POST",
+      success: (data) => {
+        var tr = "";
+        var higiene = data[0].higiene_soma;
+        var banho = '<p>' + higiene + "</p>";
+        var lanches = data[0].alimentos_soma;
+        var lanches = '<p>' + lanches + "</p>";
+        var roupas = data[0].roupas_soma;
+        var bazar = '<p>' + roupas + "</p>";
+        var ativ = data[0].atividades_soma;
+        var atendimentos = '<p>' + ativ + "</p>";
+        var vol = data[0].educador_soma;
+        var voluntariado = '<p>' + vol + "</p>";
+        tr += `<tr>`;
+        tr += `<td> Junho </td>`;
+        tr += `<td> ${lanches}</td>`;
+        tr += `<td> ${bazar}</td>`;
+        tr += `<td> ${banho}</td>`;
+        tr += `<td> ${atendimentos}</td>`;
+        tr += `<td> ${voluntariado} </td></tr>`;
+     
+        $("#table").html(tr);
             },
           });
         },
