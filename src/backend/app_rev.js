@@ -664,6 +664,7 @@ app.post("/voldelete", urlencodedParser, (req, res) => {
 });
 
 
+// Este endpoint realiza a soma das colunas da tabela fichas
 app.post('/somafichas', (req, res) => {
   res.statusCode = 200;
   res.setHeader('Access-Control-Allow-Origin', '*');
