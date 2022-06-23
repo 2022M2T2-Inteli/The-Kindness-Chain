@@ -13,9 +13,9 @@
 - <a href="https://www.linkedin.com/in/victorbarq/">Lucas de Britto Vieira</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">Felipe Henrique Moreira Leão</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Lucas Conti Pereira</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Alan Rozensztajn Schipper</a>
+- <a href="https://www.linkedin.com/in/victorbarq/">Michel Mansur</a> 
+- <a href="https://www.linkedin.com/in/victorbarq/">Beny Frid</a>
 
 ## 📝 Descrição
 
@@ -108,7 +108,7 @@ deve possuir o valor "node app.js".
 
 ## 📋 Licença/License
 
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, Jean Lucas Rothstein Machado, Lucas de Britto Vieira, Felipe Henrique Moreira Leão, Lucas Conti Pereira, Nome do integrante 5, Nome do integrante 6, Nome do integrante 7</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">Inteli, Jean Lucas Rothstein Machado, Lucas de Britto Vieira, Felipe Henrique Moreira Leão, Lucas Conti Pereira, Alan Rozensztajn Schipper, Michel Mansur, Beny Frid</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
 ## 🎓 Referências
 
