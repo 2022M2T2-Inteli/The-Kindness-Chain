@@ -11,7 +11,7 @@
 ## Integrantes: 
 - <a href="https://www.linkedin.com/in/jeanrothstein/">Jean Lucas Rothstein Machado</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">Lucas de Britto Vieira</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Felipe Henrique Moreira Leão</a> 
+- <a href=https://www.linkedin.com/in/felipe-le%C3%A3o-9a8a601a6/>Felipe Henrique Moreira Leão</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Lucas Conti Pereira</a> 
 - <a href="https://www.linkedin.com/in/victorbarq/">Alan Rozensztajn Schipper</a>
 - <a href="https://www.linkedin.com/in/victorbarq/">Michel Mansur</a> 
