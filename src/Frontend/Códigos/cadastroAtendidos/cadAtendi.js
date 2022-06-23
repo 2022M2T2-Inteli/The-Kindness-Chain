@@ -1,3 +1,4 @@
+//Get na tabela de atendido em cadastramento
 $(document).ready(() => {
   tabCadAtendidos.list();
 });

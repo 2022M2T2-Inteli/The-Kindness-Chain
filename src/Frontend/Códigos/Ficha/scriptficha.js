@@ -1,4 +1,4 @@
-api = "http://localhost:1234/";
+/*api = "http://localhost:1234/";
 
 var user = {
   insert() {
@@ -11,7 +11,13 @@ var user = {
     $.ajax({
       type: "POST",
       url: api + "/inficha",
-      data: {roupas: roupas, alimentos:alimentos, higiene:higiene, atividades:atividades, educador:educador},
+      data: {
+        roupas: roupas,
+        alimentos: alimentos,
+        higiene: higiene,
+        atividades: atividades,
+        educador: educador,
+      },
       success: function () {
         console.log("fui");
       },
@@ -19,9 +25,7 @@ var user = {
       .done(function () {
         console.log(roupas);
       })
-      .fail(function (msg) {
-      })
-      .always(function (msg) {
-      });
+      .fail(function (msg) {})
+      .always(function (msg) {});
   },
-};
+};*/
