@@ -1,4 +1,4 @@
-api = "http://localhost:1234";
+
 var cad = {
   insert() {
     var nomePessoa = document.getElementById("nomePessoa").value.trim();
@@ -20,7 +20,7 @@ var cad = {
       toalha
     ) {
       $.ajax({
-        url: api + "/assistinsert",
+        url:  "/assistinsert",
         type: "POST",
         data: {
           nomeSocial: nomePessoa,
@@ -60,7 +60,7 @@ function addPessoa(id, nome, toalha) {
 
 //Exemplo adicionando os produtos
 $.ajax({
-  url: api + "/usersassist",
+  url:  "/usersassist",
   crossDomain: true,
   headers: { "Access-Control-Allow-Origin": "*" },
   type: "GET",

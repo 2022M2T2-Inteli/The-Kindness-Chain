@@ -1,13 +1,13 @@
 var getDBResDiv = "#nome";
 var segundo = "#email";
 
-api = 'http://localhost:1234/';
+
 
 var queryString = decodeURI(location.search.substring().replace("?",""));
 console.log(queryString);
 /*
 function TestGETDB(){
-    var url = api + "/assistente";
+    var url =  + "/assistente";
     //var resposta;
 
     var xhttp = new XMLHttpRequest();

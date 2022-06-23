@@ -1,4 +1,4 @@
-api = 'http://localhost:1234';
+
 var map = {
 
     insert() {
@@ -8,7 +8,7 @@ var map = {
         var outrasInfos = document.getElementById("outrasInfos").value.trim();
         if (nomePessoa && tempoRua && localização && outrasInfos) {
                 $.ajax({
-                    url: api + '/mapinsert',
+                    url:  '/mnsert',
                     type: 'POST',
                     data: {nomePessoa: nomePessoa, tempoRua: tempoRua, localização: localização, outrasInfos: outrasInfos},
                 }).done(function () {
@@ -36,7 +36,7 @@ var map = {
         //if (nomePessoa && tempoRua && localização && outrasInfos) {
                 $.ajax({
                     type: 'POST',
-                    url: api + '/userupdate',
+                    url:  '/userupdate',
                     data: {nomePessoa: nomePessoa, tempoRua: tempoRua, localização: localização, outrasInfos: outrasInfos, IDcadastro: oldIDcadastro},
                 }).done(function () {
                     console.log(nomePessoa);
