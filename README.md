@@ -93,18 +93,22 @@ deve possuir o valor "node app.js".
 
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 25/01/2022
-    * Atualização de documentos (código do módulo permanece inalterado).
-* 0.2.0 - 15/01/2022
-    * Remove `setDefaultXYZ()`
-    * Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * Crash quando chama `baz()`
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.2.1 - 23/06/2022
+    * Deploy no heroku
+ * 0.2.1 - 20/06/2022
+    * Finalização das integrações
+* 0.2.0 - 17/06/2022
+    * Começo das integrações
+* 0.1.1 - 10/06/2022
+    * Finalização dos endpoints e banco de dados 
+* 0.1.0 - 30/05/2022
+    * Começo do backend criação dos end points e tabelas no banco de dados 
+ * 0.0.3 - 23/05/2022
+    * Finalização do frontend e começo de backend
+* 0.0.2 - 16/05/2022
+    * Melhora do frontend em decorrência das euristicas de Nielsen
+* 0.0.1 - 09/05/2022
+    * Criação dos frontend e implementação das paginas gerais
 
 ## 📋 Licença/License
 
