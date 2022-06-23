@@ -1,8 +1,7 @@
-api = "http://localhost:1234/";
+api = "http://localhost:1324/";
 
 var user = {
   insert() {
-    var dia = document.getElementById("data");
     var roupas = document.getElementById("roupas");
     var alimentos = document.getElementById("alimentos");
     var higiene = document.getElementById("higiene");
@@ -13,7 +12,7 @@ var user = {
     $.ajax({
       type: "POST",
       url: api + "/inficha",
-      data: {datahorário:dia, roupas: roupas, alimentos:alimentos, higiene:higiene, atividades:atividades, educador:educador},
+      data: {roupas: roupas, alimentos:alimentos, higiene:higiene, atividades:atividades, educador:educador},
       success: function () {
         console.log("fui");
       },

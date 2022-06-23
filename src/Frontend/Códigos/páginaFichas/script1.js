@@ -7,7 +7,7 @@ function addPessoa(id,nome,tempoRua,localizacao, outrasInfo){//Metodo para adici
 }
 
 //Exemplo adicionando os produtos
-const api = "http://localhost:1234"
+const api = "http://localhost:1324"
 $.ajax({
   url: api + '/users',
   crossDomain: true,
@@ -60,9 +60,9 @@ function buscar(){//Função responsavel de buscar os produtos
  function listarPessoas(i){//Lista o produto do indece do array produto informado
     if(i!=null){
       //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><a href='mapUpdate.html' onclick='maps.list(" + pessoas[i].id + "," + pessoas[i].nome + "," + pessoas[i].tempoRua + "," + pessoas[i].localizacao + "," + pessoas[i].outrasInfo + ")'><button class='alterar'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
-      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><a href = '../cadastroAtendidos/cadastroAt.html'><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></a></td><td><button class='alterar' onclick='maps.list(" + pessoas[i].id + ",\"" + pessoas[i].nome + "\",\"" + pessoas[i].tempoRua + "\",\"" + pessoas[i].localizacao + "\",\"" + pessoas[i].outrasInfo + "\")'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
+      //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='maps.list(" + pessoas[i].id + ",\"" + pessoas[i].nome + ",\"" + pessoas[i].tempoRua + ",\"" + pessoas[i].localizacao + ",\"" + pessoas[i].outrasInfo + ")'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
       
-      //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><a href = '../cadastroAtendidos/cadastroAt.html'><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></a></td><td><button class='alterar' onclick='maps.list()'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
+      $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><a href = '../cadastroAtendidos/cadastroAt.html'><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></a></td><td><button class='alterar' onclick='maps.list()'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
 
       //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><a href='../mapUpdate.html'><button class='alterar' onclick='maps.list(" + pessoas[i].id + ")'><i class='fa-solid fa-pen-to-square'></i></button></a></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
     }
@@ -78,15 +78,13 @@ buscar();//Inicializa mostrando todos os itens existentes
 
 
 var maps = {
-  list(id, oldNome, oldTempoRua, oldLocalizacao, oldOutrasInfos) {
-    console.log(id + oldNome + oldTempoRua +  oldLocalizacao + oldOutrasInfos)
-      window.open("mapUpdate.html?"+id+"|"+oldNome+"|"+oldTempoRua+"|"+oldLocalizacao+"|"+oldOutrasInfos),
+  list() {
+      //window.location.assign("mapUpdate.html"),
       $.ajax({
           //url: api +'/users',
           type: 'GET',
           success: data => {
             console.log("Ola")
-            console.log(id + oldNome + oldTempoRua +  oldLocalizacao + oldOutrasInfos)
             //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
             //document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldLocalizacao +'name="tempo">';
             //document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 

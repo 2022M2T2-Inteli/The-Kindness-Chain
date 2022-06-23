@@ -1,4 +1,4 @@
-api = 'http://localhost:1234';
+api = 'http://localhost:1324';
 
 var pessoas=[];//Vetor para armazenar os produtos
 function addPessoa(id,roupas,alimentos, higiene, atividades, educador){//Metodo para adicionar os produtos no array
