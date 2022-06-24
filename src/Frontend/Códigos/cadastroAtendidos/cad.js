@@ -1,6 +1,7 @@
 api = "http://localhost:1234";
 var cad = {
   insert() {
+    //Pega os valores dos campos de input na página HTML;
     var nomePessoa = document.getElementById("nomePessoa").value.trim();
     var cpf_rg = document.getElementById("cpfrg").value.trim();
     var servSoc = document.getElementById("servsoc").value.trim();
@@ -9,6 +10,7 @@ var cad = {
     var enc = document.getElementById("encaminhamento").value.trim();
     var motivos = document.getElementById("motivos").value.trim();
     var toalha = document.getElementById("toalha").value.trim();
+    //se os dados estiverem preenchidos nos campos;
     if (
       nomePessoa &&
       cpf_rg &&
@@ -19,6 +21,7 @@ var cad = {
       motivos &&
       toalha
     ) {
+      //comunicação com o banco de dados a partir do endpoint;
       $.ajax({
         url: api + "/assistinsert",
         type: "POST",
@@ -39,17 +42,15 @@ var cad = {
           users.list();
         })
         .fail(function (msg) {
-          //console.log('FAIL');
         })
         .always(function (msg) {
-          //console.log('ALWAYS');
         });
 
       // }
     }
   },
 };
-
+//função de search na tabela da página HTML;
 var pessoas = []; //Vetor para armazenar os produtos
 function addPessoa(id, nome, toalha) {
   //Metodo para adicionar os produtos no array
@@ -59,6 +60,7 @@ function addPessoa(id, nome, toalha) {
 }
 
 //Exemplo adicionando os produtos
+//Pega os valores que foram inseridos no banco de dados e devolve na página;
 $.ajax({
   url: api + "/usersassist",
   crossDomain: true,
@@ -109,9 +111,6 @@ function buscar() {
 function listarPessoas(i) {
   //Lista o produto do indece do array produto informado
   if (i != null) {
-    //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><a href='mapUpdate.html' onclick='maps.list(" + pessoas[i].id + "," + pessoas[i].nome + "," + pessoas[i].tempoRua + "," + pessoas[i].localizacao + "," + pessoas[i].outrasInfo + ")'><button class='alterar'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
-    //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='maps.list(" + pessoas[i].id + ",\"" + pessoas[i].nome + ",\"" + pessoas[i].tempoRua + ",\"" + pessoas[i].localizacao + ",\"" + pessoas[i].outrasInfo + ")'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
-    //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><button class='alterar' onclick='maps.list()'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
 
     $("tbody").append(
       "<tr class='produto'><td>" +

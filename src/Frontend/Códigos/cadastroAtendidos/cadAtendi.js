@@ -1,7 +1,8 @@
+//função de quando o documento está pronto;
 $(document).ready(() => {
   tabCadAtendidos.list();
 });
-
+//ajax que pega os dados inseridos no Banco de Dados e insere na tabela;
 var tabCadAtendidos = {
   list() {
     $.ajax({

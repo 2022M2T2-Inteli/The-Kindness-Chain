@@ -1,6 +1,6 @@
 api = 'http://localhost:1234';
 var map = {
-
+//ajax que pega os dados a partir do id de inputs nas páginas com as variáveis abaixo, e insere os dados dos inputs no Banco de Dados;
     insert() {
         var nomePessoa = document.getElementById("nomePessoa").value.trim();
         var tempoRua = document.getElementById("tempoRua").value.trim();
@@ -18,13 +18,12 @@ var map = {
                     console.log(outrasInfos);
 
                 }).fail(function (msg) {
-                    //console.log('FAIL');
                 }).always(function (msg) {
-                    //console.log('ALWAYS');
                 });
             
         }
     },
+    //update que pega os dados antigos no Banco de Dados;
 
     update(oldIDcadastro, oldNomePessoa, oldTempoRua, oldLocalização, oldOutrasInfos) {
 
@@ -33,7 +32,6 @@ var map = {
         var localização = document.getElementById("localização").placeholder(oldLocalização).trim();
         var outrasInfos = document.getElementById("outrasInfos").placeholder(oldOutrasInfos).trim();
 
-        //if (nomePessoa && tempoRua && localização && outrasInfos) {
                 $.ajax({
                     type: 'POST',
                     url: api + '/userupdate',
@@ -42,9 +40,7 @@ var map = {
                     console.log(nomePessoa);
                     map.update();
                 }).fail(function (msg) {
-                    //console.log('FAIL');
                 }).always(function (msg) {
-                    //console.log('ALWAYS');
                 });
-        //}
+
     }};

@@ -5,7 +5,7 @@ function addPessoa(id,nome,tempoRua,localizacao, outrasInfo){//Metodo para adici
   pessoas[pessoas.length] = {id:id,nome:nome,tempoRua:tempoRua,localizacao:localizacao,outrasInfo:outrasInfo};
   console.log(pessoas);
 }
-
+//Ajax que pega os dados inseridos no Banco de Dados e mostra na tabela da página HTML;
 //Exemplo adicionando os produtos
 const api = "http://localhost:1234"
 $.ajax({
@@ -20,12 +20,6 @@ $.ajax({
     });
   }
 });
-
-
-//addProduto(id_produto,'Piso Vinílico Porto Design','0m²','R$ 79,90');
-//addProduto('T8002','Piso Laminado Durafloor','40m²','R$ 49,90');
-//addProduto('T8003','Piso Laminado Eucafloor','33m²','R$ 37,90');
-//addProduto('T8004','Porcelanato Eliane','0m²','R$ 102,90');
 
 $("#input").keypress(function(e){//Adiciona ação de actionkey no input
   if(e.which == 13) {
@@ -59,12 +53,9 @@ function buscar(){//Função responsavel de buscar os produtos
 }
  function listarPessoas(i){//Lista o produto do indece do array produto informado
     if(i!=null){
-      //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><a href='mapUpdate.html' onclick='maps.list(" + pessoas[i].id + "," + pessoas[i].nome + "," + pessoas[i].tempoRua + "," + pessoas[i].localizacao + "," + pessoas[i].outrasInfo + ")'><button class='alterar'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
       $('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><a href = '../cadastroAtendidos/cadastroAt.html'><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></a></td><td><button class='alterar' onclick='maps.list(" + pessoas[i].id + ",\"" + pessoas[i].nome + "\",\"" + pessoas[i].tempoRua + "\",\"" + pessoas[i].localizacao + "\",\"" + pessoas[i].outrasInfo + "\")'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
       
-      //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><a href = '../cadastroAtendidos/cadastroAt.html'><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></a></td><td><button class='alterar' onclick='maps.list()'><i class='fa-solid fa-pen-to-square'></i></button></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");    
 
-      //$('tbody').append("<tr class='produto'><td>"+pessoas[i].id+"</td><td>"+pessoas[i].nome+"</td><td>"+pessoas[i].tempoRua+"</td><td>"+pessoas[i].localizacao+"</td><td>"+pessoas[i].outrasInfo+"</td><td><button class='cadastrar'><i class='fa-solid fa-plus'></i></button></td><td><a href='../mapUpdate.html'><button class='alterar' onclick='maps.list(" + pessoas[i].id + ")'><i class='fa-solid fa-pen-to-square'></i></button></a></td><td><button class='deletar' onclick='user.delete(" + pessoas[i].id + ")'><i class='fa-solid fa-trash-can'></i></button></td></tr>");
     }
   }
 
@@ -82,115 +73,23 @@ var maps = {
     console.log(id + oldNome + oldTempoRua +  oldLocalizacao + oldOutrasInfos)
       window.open("mapUpdate.html?"+id+"|"+oldNome+"|"+oldTempoRua+"|"+oldLocalizacao+"|"+oldOutrasInfos),
       $.ajax({
-          //url: api +'/users',
           type: 'GET',
           success: data => {
             console.log("Ola")
             console.log(id + oldNome + oldTempoRua +  oldLocalizacao + oldOutrasInfos)
-            //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
-            //document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldLocalizacao +'name="tempo">';
-            //document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
-            //document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= '+ oldOutrasInfos +' value = '+ oldOutrasInfos +' name="info">';
           }
       });
       
   }
   
 };
-/*
-var maps = {
-  list() {
-    console.log("Ola")
-      window.location.assign("mapUpdate.html");
-      $.ajax({
-          //url: api + '/users',
-          type: 'GET',
-          success: data => {
-            mapear.list()
-            console.log("Ola")
-            //document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
-            //document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldLocalizacao +'name="tempo">';
-            //document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
-            //document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= '+ oldOutrasInfos +' value = '+ oldOutrasInfos +' name="info">';
-          }
-      });
-      
-  }
-  
-};*/
 
-
-/*
-var maps = {
-  list(userId, oldNome, oldTempoRua, oldLocalizacao, oldOutrasInfos) {
-      $.ajax({
-          url: api + '/users',
-          type: 'GET',
-          success: data => {
-            window.location.href = "mapUpdate.html";
-            document.querySelector('#info1').innerHTML += '<input id="nomePessoa" type="text" class="login__input" placeholder= '+ oldNome +' value='+ oldNome +' name="nome">';
-            document.querySelector('#info2').innerHTML += '<input id="tempoRua" type="text" class="login__input" placeholder= '+ oldTempoRua +' value = '+ oldLocalizacao +'name="tempo">';
-            document.querySelector('#info3').innerHTML += '<input id="localização" type="text" class="login__input" placeholder= '+oldLocalizacao+' value = '+oldLocalizacao+'name="local">'; 
-            document.querySelector('#info4').innerHTML += '<input id="outrasInfos" type="text" class="login__input" placeholder= '+ oldOutrasInfos +' value = '+ oldOutrasInfos +' name="info">';
-            console.log(userId);
-          }
-      });
-      
-  }
-  
-};
-*/
 
 
 var user = {
 
 
-  update(userId, oldNome, oldTempoRua, oldLocalizacao, oldOutrasInfos) {
-    var nome = document.getElementById("nomePessoa").value;
-    var tempoRua = document.getElementById("tempoRua").value;
-    var localizacao = document.getElementById("localização").value;
-    var outrasInfo = document.getElementById("outrasInfos").value;
-    if (userId && nome && tempoRua && localizacao && outrasInfo) {
-        if (nome.trim() != '') {
-            $.ajax({
-                type: 'POST',
-                url: api + '/userupdate',
-                data: {nomePessoa: nome, tempoRua: tempoRua, outrasInfos: outrasInfo, localização: localizacao, IDcadastro: userId},
-            }).done(function () {
-                users.list();
-            }).fail(function (msg) {
-                //console.log('FAIL');
-            }).always(function (msg) {
-                //console.log('ALWAYS');
-            });
-        }
-    }
-  },
-  /*  
-  update(IDcadastro, oldNomePessoa, oldTempoRua, oldLocalização, oldOutrasInfos) {
 
-    var nomePessoa = document.getElementById("nomePessoa").value.trim(oldNomePessoa);
-    var tempoRua = document.getElementById("tempoRua").value.trim(oldTempoRua);
-    var localização = document.getElementById("localização").value.trim(oldLocalização);
-    var outrasInfos = document.getElementById("outrasInfos").value.trim(oldOutrasInfos);
-    //var nomePessoa = prompt('Digite o novo nome:', oldTitle);
-    if (nomePessoa && tempoRua && localização && outrasInfos) {
-            $.ajax({
-                type: 'POST',
-                url: api + '/userupdate',
-                data: {nomePessoa: nomePessoa, tempoRua: tempoRua, localização: localização, outrasInfos: outrasInfos, IDcadastro: IDcadastro},
-            }).done(function () {
-                users.list();
-            }).fail(function (msg) {
-                //console.log('FAIL');
-            }).always(function (msg) {
-                //console.log('ALWAYS');
-            });
-        
-    }
-  
-  },
-  */
 
   delete(userId) {
 
@@ -202,64 +101,10 @@ var user = {
           }).done(function () {
               users.list();
           }).fail(function (msg) {
-              //console.log('FAIL');
           }).always(function (msg) {
-              //console.log('ALWAYS');
           });
       }
   },
 
 }
 
-/*
-var maps = {
-  list(IDvoluntario) {
-      $.ajax({
-          url: api + '/users',
-          type: 'GET',
-          success: data => {
-            console.log("OLA");
-
-              data.forEach(element => {
-                if(IDvoluntario == element.IDvoluntario){
-                  console.log("OLA");
-                var tx = '';
-                  tx += '<div class="CAD" style="height:600px; margin-top: 20px;"> Mapeamento';
-                    tx += '<form class="login" style="padding:0px;">';
-                      tx += '<div class="login__field">';
-                        tx += '<i class="login__icon fas fa-user"></i>';
-                        tx += '<input id="nomePessoa" type="text" class="login__input" placeholder="${element.nomeCad}" value="${element.nomeCad}" name="nome">';
-                      tx += '</div>';
-              
-                    tx += '<div class="login__field">';
-                      tx += '<i class="login__icon fas fa-user"></i>';
-                      tx += '<input id="tempoRua" type="text" class="login__input" placeholder="Tempo de Rua" name="tempo">';
-                    tx += '</div>';
-              
-                    tx += '<div class="login__field">';
-                      tx += '<i class="login__icon fas fa-user"></i>';
-                      tx += '<input id="localização" type="text" class="login__input" placeholder="Localização" name="local">';
-                    tx += '</div>';
-              
-                    tx += '<div class="login__field">';
-                      tx += '<i class="login__icon fas fa-user"></i>';
-                      tx += '<input id="outrasInfos" type="text" class="login__input" placeholder="Outras Informações" name="info">';
-                    tx += '</div>';
-              
-                    tx += '<button onclick="map.insert()" class="button login__submit ">';
-                      tx += '<span class="button__text">Cadastrar</span>';
-                      tx += '<i class="button__icon fas fa-chevron-right"></i>';
-                    tx += '</button>';
-                    tx += '</form>';
-                  tx += '</div>';
-                  document.getElementById("atualizar").innerHTML = tx;
-                }
-              });
-          }
-      });
-      
-  }
-  
-};
-*/
-//onclick='user.update(" + pessoas[i].id + ",\"" + pessoas[i].nome + ",\"" + pessoas[i].tempoRua + ",\"" + pessoas[i].localizacao + ",\"" + pessoas[i].outrasInfo + ")'

@@ -1,10 +1,5 @@
 api = "http://localhost:1234";
 
-/*
-$(document).ready(() => {
-   users.login();
-});
-*/
 
 var vol = {
   insert() {
@@ -27,10 +22,8 @@ var vol = {
           alert("Os dados foram enviados");
         })
         .fail(function (msg) {
-          //console.log('FAIL');
         })
         .always(function (msg) {
-          //console.log('ALWAYS');
         });
     }
   },
@@ -45,10 +38,8 @@ var vol = {
           users.list();
         })
         .fail(function (msg) {
-          //console.log('FAIL');
         })
         .always(function (msg) {
-          //console.log('ALWAYS');
         });
     }
   },

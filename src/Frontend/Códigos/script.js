@@ -1,10 +1,5 @@
 api = "http://localhost:1234";
 
-/*
-$(document).ready(() => {
-   users.login();
-});
-*/
 var users = {
   login() {
     var done = false;
@@ -25,7 +20,6 @@ var users = {
 
               if (email === element.email && senha === element.senha) {
                 window.open("Perfil do Adm/perfil.html?"+element.nome),
-                //console.log(email + "" + senha)
                 done = true;
               }
             });
@@ -43,8 +37,6 @@ var users = {
 
               if (email === element.email && senha === element.senha) {
                 window.open("Perfil do Adm/perfil.html?"+element.nome), 
-                //window.location = "páginaFichas/lista.html";
-                //console.log(email + "" + senha)
                 done = true;
               }
             });
@@ -77,10 +69,8 @@ var vol = {
           alert("Os dados foram enviados");
         })
         .fail(function (msg) {
-          //console.log('FAIL');
         })
         .always(function (msg) {
-          //console.log('ALWAYS');
         });
     }
   },
@@ -95,10 +85,8 @@ var vol = {
           users.list();
         })
         .fail(function (msg) {
-          //console.log('FAIL');
         })
         .always(function (msg) {
-          //console.log('ALWAYS');
         });
     }
   },
@@ -138,11 +126,6 @@ $.ajax({
     });
   },
 });
-
-//addProduto(id_produto,'Piso Vinílico Porto Design','0m²','R$ 79,90');
-//addProduto('T8002','Piso Laminado Durafloor','40m²','R$ 49,90');
-//addProduto('T8003','Piso Laminado Eucafloor','33m²','R$ 37,90');
-//addProduto('T8004','Porcelanato Eliane','0m²','R$ 102,90');
 
 $("#input").keypress(function (e) {
   //Adiciona ação de actionkey no input
@@ -263,38 +246,7 @@ var map = {
     oldLocalização,
     oldOutrasInfos
   ) {
-    /*
-    var tx = '';
-    tx += '<div class="CAD" style="height:600px; margin-top: 20px;"> Mapeamento';
-      tx += '<form class="login" style="padding:0px;">';
-        tx += '<div class="login__field">';
-          tx += '<i class="login__icon fas fa-user"></i>';
-          tx += '<input id="nomePessoa" type="text" class="login__input" placeholder="${element.nomeCad}" value="${element.nomeCad}" name="nome">';
-        tx += '</div>';
 
-      tx += '<div class="login__field">';
-        tx += '<i class="login__icon fas fa-user"></i>';
-        tx += '<input id="tempoRua" type="text" class="login__input" placeholder="Tempo de Rua" name="tempo">';
-      tx += '</div>';
-
-      tx += '<div class="login__field">';
-        tx += '<i class="login__icon fas fa-user"></i>';
-        tx += '<input id="localização" type="text" class="login__input" placeholder="Localização" name="local">';
-      tx += '</div>';
-
-      tx += '<div class="login__field">';
-        tx += '<i class="login__icon fas fa-user"></i>';
-        tx += '<input id="outrasInfos" type="text" class="login__input" placeholder="Outras Informações" name="info">';
-      tx += '</div>';
-
-      tx += '<button onclick="map.insert()" class="button login__submit ">';
-        tx += '<span class="button__text">Cadastrar</span>';
-        tx += '<i class="button__icon fas fa-chevron-right"></i>';
-      tx += '</button>';
-      tx += '</form>';
-    tx += '</div>';
-    $('#atualizar').html(tx);
-      */
     var nomePessoa = document
       .getElementById("nomePessoa")
       .value.trim(oldNomePessoa);
@@ -305,7 +257,6 @@ var map = {
     var outrasInfos = document
       .getElementById("outrasInfos")
       .value.trim(oldOutrasInfos);
-    //var nomePessoa = prompt('Digite o novo nome:', oldTitle);
     if (nomePessoa && tempoRua && localização && outrasInfos) {
       $.ajax({
         type: "POST",
@@ -322,10 +273,8 @@ var map = {
           users.list();
         })
         .fail(function (msg) {
-          //console.log('FAIL');
         })
         .always(function (msg) {
-          //console.log('ALWAYS');
         });
     }
   },
